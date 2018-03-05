@@ -1,0 +1,1 @@
+FileReader, FileWriter, BufferedReader,  BufferedWriter, Catching IOExceptions, Try-with-resources Statement, Object input and output including Serialization, Libraries: java.io, java.util Side note: In this module Java I/O and sequential files access has been used. Java NIO and Random access file have been considered but finally not implemented.

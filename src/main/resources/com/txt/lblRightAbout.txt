@@ -1,0 +1,1 @@
+Application uses Java 8, JavaFX, including FXML, CSS, Controlers classes, for the most part has been developed based on Model View Controller architectural pattern. Java Runtime Environment 1.7 or higher is required.

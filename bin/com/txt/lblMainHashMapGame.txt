@@ -1,0 +1,1 @@
+Go for a walk around the City of Rome. This module loads City Map data from txt file and load it into HashMap and saves as Serializable objects in .dat file Use arrows at the bottom of screen to move. Read about the places in description box and see where you want to go and where you currently are on map using legend.

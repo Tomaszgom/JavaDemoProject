@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="742.0" prefWidth="1331.0" stylesheets="@../css/DemoMain.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ContrDemoMain">
+  <children>
+    <MenuBar prefHeight="31.0" prefWidth="1087.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Go to">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="MenuQuit" mnemonicParsing="false" onAction="#ActMenuQuit" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About App" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane dividerPositions="0.28893905191873587, 0.7065462753950339" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane fx:id="PaneMenu">
+          <children>
+                  <Button fx:id="butAbout" layoutX="38.0" layoutY="44.0" mnemonicParsing="false" onAction="#ActButAbout" onMouseEntered="#butAboutMosEtr" onMouseExited="#butAboutMosExt" prefHeight="28.0" prefWidth="305.0" text="About">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu></Button>
+                  <Button fx:id="butThreads" layoutX="38.0" layoutY="336.0" mnemonicParsing="false" onAction="#ActButThreads" prefHeight="28.0" prefWidth="305.0" text="Threads" />
+                  <Button fx:id="butDesignPatterns" layoutX="38.0" layoutY="429.0" mnemonicParsing="false" onAction="#ActButDesignPatterns" prefHeight="28.0" prefWidth="305.0" text="Design Pattern Factory" />
+                  <Button layoutX="38.0" layoutY="97.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="305.0" text="Composition" />
+                  <Button layoutX="38.0" layoutY="383.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="305.0" text="Input Output" />
+                  <Button layoutX="38.0" layoutY="240.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="305.0" text="Dataase and JTable" />
+                  <Button layoutX="38.0" layoutY="147.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="305.0" text="Encapsulation" />
+                  <Button layoutX="38.0" layoutY="195.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="305.0" text="HashMap City Game" />
+                  <Button layoutX="38.0" layoutY="288.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="305.0" text="Collections Project Scheduler" />
+                  <Button layoutX="38.0" layoutY="477.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="305.0" text="Design Pattern Observer" />
+                  <Button fx:id="butDesignPatt_Strategy" layoutX="38.0" layoutY="524.0" mnemonicParsing="false" onAction="#ActButbutDesignPatt_Strategy" prefHeight="28.0" prefWidth="305.0" text="Design Pattern Strategy" />
+                  <Button layoutX="38.0" layoutY="591.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="305.0" text="Space Travel 2D Video Game" />
+          </children>
+        </AnchorPane>
+        <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
+          <content>
+            <AnchorPane id="Content" fx:id="PaneAbout" minHeight="-1.0" minWidth="-1.0" prefHeight="639.0" prefWidth="501.0">
+              <children>
+                <Label fx:id="lblMain" alignment="CENTER" contentDisplay="CENTER" layoutX="33.0" layoutY="14.0" prefHeight="625.0" prefWidth="486.0" style="&#10;" text="About" textAlignment="JUSTIFY" textFill="#393838" wrapText="true">
+                           <font>
+                      <Font size="18.0" fx:id="x1" />
+                           </font></Label>
+                        <ProgressBar fx:id="progressBar" layoutX="65.0" layoutY="468.0" prefHeight="32.0" prefWidth="389.0" progress="0.0" />
+                        <ImageView fitHeight="150.0" fitWidth="219.0" layoutX="168.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../jpg/gearsImg.jpg" />
+                           </image>
+                        </ImageView>
+              </children>
+            </AnchorPane>
+          </content>
+        </ScrollPane>
+        <AnchorPane fx:id="PaneRight" prefHeight="685.0" prefWidth="361.0">
+          <children>
+            <Label fx:id="lblRightPane" alignment="CENTER" contentDisplay="CENTER" font="$x1" layoutX="26.0" layoutY="155.0" prefHeight="318.0" prefWidth="339.0" style="&#10;" text="Libraries, technologies and concepts used" textAlignment="JUSTIFY" textFill="#1b1818" wrapText="true" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+      <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Java Demo Project" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+          </textFill>
+        </Label>
+        <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+        <Label font="$x3" maxWidth="-1.0" text="Java Demo Project" textFill="$x4" HBox.hgrow="ALWAYS" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+</VBox>

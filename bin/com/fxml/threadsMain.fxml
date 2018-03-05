@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="threadsMainVbox" prefHeight="416.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ContrThreadsMain">
+  <children>
+    <AnchorPane fx:id="threadsMainAnchorPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="395.0" prefWidth="682.0" VBox.vgrow="ALWAYS">
+      <children>
+            <ImageView fitHeight="76.0" fitWidth="136.0" layoutX="64.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../jpg/threads.jpg" />
+               </image>
+            </ImageView>
+        <Label alignment="CENTER" layoutX="223.0" layoutY="45.0" prefHeight="36.0" prefWidth="269.0" style="&#10;" text="Threads Concurrency " textAlignment="CENTER" textFill="#111111" wrapText="true">
+          <font>
+            <Font name="System Bold" size="18.0" />
+          </font>
+        </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="110.0" prefHeight="67.0" prefWidth="619.0" text="This program is designed to show usage, behaviour and interactions of Java Threads. It is designed to be a graphical presentation and beside starting pressing 'Start' button it does not require any particular usage actions." textAlignment="JUSTIFY" textFill="#111111" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="butStartThreads" layoutX="222.0" layoutY="258.0" mnemonicParsing="false" onAction="#ActStartThreads" prefHeight="67.0" prefWidth="239.0" text="Start Threads Presentation">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Label fx:id="lblProgress" alignment="CENTER" contentDisplay="CENTER" layoutX="262.0" layoutY="338.0" prefHeight="28.0" prefWidth="158.0" text="Progress" textAlignment="CENTER">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="butReset" layoutX="222.0" layoutY="337.0" mnemonicParsing="false" onAction="#ActReset" prefHeight="31.0" prefWidth="239.0" text="Reset">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Label layoutX="30.0" layoutY="177.0" prefHeight="52.0" prefWidth="627.0" text="'Threads' is using Java Concurrency, implementation of 'Runnable' interface, inheritance of 'Task' observable class as well as  threads sleep, join, interrupt and more." textAlignment="JUSTIFY" wrapText="true" />
+      </children>
+         <effect>
+            <ColorAdjust />
+         </effect>
+    </AnchorPane>
+  </children>
+</VBox>

@@ -1,0 +1,1 @@
+This section presents reading from and writing into text and binary files. Additionlly file picker have been used window to choose local directory.
