@@ -12,7 +12,7 @@ First of all Car class is created from engine and 4 weels.
 
 Whenever we need to check oil level, we will first call car in which we have engine. Engine has method that allows to check the oil level.
 */
-public class Main {
+public class Main_test {
 
     public static void main(String[] args) {
         OilFilter_test oilFilter = new OilFilter_test("new");

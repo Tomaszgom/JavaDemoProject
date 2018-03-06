@@ -1,12 +1,12 @@
 package com.composition;
 
-public class Engine {
+public class Engine_test {
     private String manufacturer;
     private String power;
     private int oilLevel;
     private OilFilter_test oilFilter;
     
-    public Engine(String manufacturer, String power, int oilLevel, OilFilter_test oilFilter) {
+    public Engine_test(String manufacturer, String power, int oilLevel, OilFilter_test oilFilter) {
         this.manufacturer = manufacturer;
         this.power = power;
         this.oilLevel = oilLevel;

@@ -1,13 +1,13 @@
 package com.composition;
 
-public class Car {
+public class Car_test {
     private Engine_test cEngine;
     private Wheel_test Wheel1;
     private Wheel_test Wheel2;
     private Wheel_test Wheel3;
     private Wheel_test Wheel4;
     
-    public Car(Engine_test cEngine, Wheel_test wheel1, Wheel_test wheel2, Wheel_test wheel3, Wheel_test wheel4) {
+    public Car_test(Engine_test cEngine, Wheel_test wheel1, Wheel_test wheel2, Wheel_test wheel3, Wheel_test wheel4) {
 		super();
 		this.cEngine = cEngine;
 		Wheel1 = wheel1;
