@@ -32,12 +32,12 @@ public class Main extends Application {
 			primaryStage.show();*/
 			
 	//---------------DemoMain--------------------		
-			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/DemoMain.fxml"));
+/*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/DemoMain.fxml"));
 			Scene scene = new Scene(root,1331.0,742.0);
 			//scene.getStylesheets().add(getClass().getResource("/com/css/welcomeScreen.css").toExternalForm());
 			primaryStage.setTitle(publConst.ProjName.getText());
 			primaryStage.setScene(scene);
-			primaryStage.show();
+			primaryStage.show();*/
 			
 	//-------------- hashMapGame ----------		
 /*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/hashMapGame.fxml"));			
@@ -47,9 +47,17 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();*/
 			
-	// ------------------ Project Composition
-/*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/composition.fxml"));			
-			Scene scene = new Scene(root,640.0,400.0);
+	// ------------------ Composition
+/*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/composition.fxml"));	
+			Scene scene = new Scene(root,978.0,614.0);
+			//scene.getStylesheets().add(getClass().getResource("/com/css/welcomeScreen.css").toExternalForm());
+			//primaryStage.setTitle(publConst.ProjName.getText());
+			primaryStage.setScene(scene);
+			primaryStage.show();*/
+			
+// ------------------ Composition
+/*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/encapsulation.fxml"));	
+			Scene scene = new Scene(root,1039.0,667.0);
 			//scene.getStylesheets().add(getClass().getResource("/com/css/welcomeScreen.css").toExternalForm());
 			//primaryStage.setTitle(publConst.ProjName.getText());
 			primaryStage.setScene(scene);
@@ -95,6 +103,14 @@ public class Main extends Application {
 			//System.out.println("root Class"+root.getClass().getName());
 			//System.out.println("Controler-----: "+fxmlLoader.getController());
 */			
+			
+	// ------------------ Video Game 2D
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/videoGame2D.fxml"));	
+			Scene scene = new Scene(root,736.0,400.0);
+			primaryStage.setScene(scene);
+			primaryStage.show();	
+			
+			
 						
 		} catch(Exception e) {
 			e.printStackTrace();

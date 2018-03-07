@@ -1,13 +1,13 @@
 package com.composition;
 
 public class Car {
-    private Engine_test cEngine;
-    private Wheel_test Wheel1;
-    private Wheel_test Wheel2;
-    private Wheel_test Wheel3;
-    private Wheel_test Wheel4;
+    private Engine cEngine;
+    private Wheel Wheel1;
+    private Wheel Wheel2;
+    private Wheel Wheel3;
+    private Wheel Wheel4;
     
-    public Car(Engine_test cEngine, Wheel_test wheel1, Wheel_test wheel2, Wheel_test wheel3, Wheel_test wheel4) {
+    public Car(Engine cEngine, Wheel wheel1, Wheel wheel2, Wheel wheel3, Wheel wheel4) {
 		super();
 		this.cEngine = cEngine;
 		Wheel1 = wheel1;
@@ -16,16 +16,22 @@ public class Car {
 		Wheel4 = wheel4;
 	}
     
-    public void CheckCar() {    	
-    	System.out.println("The engine " + cEngine.getManufacturer() + " powered by " + cEngine.getPower());
-    	cEngine.CheckTheOil();
-        CheckTires();
+    public String CheckCar() {    	
+    	String str;
+    	//System.out.println("The engine " + cEngine.getManufacturer() + " powered by " + cEngine.getPower());
+    	str = "The engine " + cEngine.getManufacturer() + " powered by " + cEngine.getPower()+"\n";
+    	str = str + cEngine.CheckTheOil();
+    	str = str + CheckTires()+"\n";
+        return str;
     }
 
-    private void CheckTires() {
-    	Wheel_test[] wheels = {Wheel1, Wheel2, Wheel3, Wheel4};
-        for(Wheel_test W: wheels) {
-        	System.out.println("Wheel number " + W.getNumber() + " pressure is " + W.getPressure());
+    private String CheckTires() {
+    	String str = "";
+    	Wheel[] wheels = {Wheel1, Wheel2, Wheel3, Wheel4};
+        for(Wheel W: wheels) {
+        	//System.out.println("Wheel number " + W.getNumber() + " pressure is " + W.getPressure());
+        	str = str + "Wheel number " + W.getNumber() + " pressure is " + W.getPressure()+"\n";
         }
+        return str;
     }
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="667.0" prefWidth="1039.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ContrComposition">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="555.0" prefWidth="978.0" VBox.vgrow="ALWAYS">
+      <children>
+            <ImageView fx:id="ImgVPink" fitHeight="405.0" fitWidth="917.0" layoutX="104.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../jpg/encapsulation.JPG" />
+               </image>
+            </ImageView>
+        <Label alignment="CENTER" layoutX="309.0" layoutY="14.0" prefHeight="36.0" prefWidth="370.0" style="&#10;" text="Encapsulation" textAlignment="CENTER" textFill="#111111" wrapText="true">
+          <font>
+            <Font name="System Bold" size="18.0" />
+          </font>
+        </Label>
+            <Label layoutX="52.0" layoutY="50.0" prefHeight="54.0" prefWidth="851.0" text="Encapsulation allows to restrict access to certain components in the object, allows to protect members of the class from external access in order to guard against unauthorized access. Changes within class will not affect external code." wrapText="true" />
+            <Label layoutX="52.0" layoutY="104.0" prefHeight="142.0" prefWidth="863.0" text="Example: Chandelier that uses the Encapsulation which restricts changes/ manipulation from outside of the class. In case there is a need to change  variables from outside of class appropriate methods getters and setters are used. Constructor guaranties that all necessary variables are set once object is created. Chandelier has max power and up to 3 light bulbs. Each bulb is separate class. Sum of all light bulb's power cannot exceed max chandelier power, otherwise it will be burned. Constructors - each allowing to create Chandelier with min 1, max 3 light bulbs." wrapText="true" />
+      </children>
+         <effect>
+            <ColorAdjust />
+         </effect>
+    </AnchorPane>
+  </children>
+</VBox>

@@ -2,15 +2,14 @@ package com.encapsulation;
 
 
 public class Chandelier {
-	/*Chandelier has max power and up to 3 light bulbs. Each bulb is separate class. Chandelier
-	 * m
+	/*Chandelier has max power and up to 3 light bulbs. Each bulb is separate class.
+	 * 
 	 * Sum of all light bulb's power cannot exceed max chandelier power
 	 * all variables by default are private, so we need to use getters
 	 * fields witin cas are not accessible to external classes
-	 * 
 	 * */
 	//
-	//changes around fields within class does not affect what is heppening outside of class
+	//changes around fields within class does not affect what is happening outside of class
     private String color;
     private int chanMaxPower = 200; //we produce only chandelier with max power 200
     private LightBulb lightBulb1, lightBulb2, lightBulb3;

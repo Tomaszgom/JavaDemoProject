@@ -6,9 +6,9 @@ package com.encapsulation;
  * changes within class will not affect external code
  * 
  * Example
- * Player class that does not use Encapsulation
- * Enhanced Players uses the Encapsulation
- * Encapsulation restrict changes/ manipulation of class variables from outside of the class, need of variables names change outside of class
+ * Chadelier that uses the Encapsulation
+ * Encapsulation restrict changes/ manipulation of class variables from outside of the class, on case there is a need
+ * ofr  variables from outside of class appropriate methids getters and setters are used
  * constructor guaranties that all necessary variables are set once object is created
 */
 public class Main {

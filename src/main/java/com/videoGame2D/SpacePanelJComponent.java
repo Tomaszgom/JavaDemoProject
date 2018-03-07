@@ -13,8 +13,7 @@ import javax.swing.JComponent;
 @SuppressWarnings("serial")
 
 public class SpacePanelJComponent extends JComponent{
-	
-	
+		
 		public static ArrayList<Star> stars = new ArrayList<Star>();	
 			
 		public static Craft craft; //Craft Object
