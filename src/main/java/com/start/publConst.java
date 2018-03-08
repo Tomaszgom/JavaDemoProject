@@ -12,8 +12,7 @@ public enum publConst {
 //-------  Enumerators Descriptions are loaded from resources txtx files ----
 		
 //----Project Name
-		ProjName("Java Demo Project"),
-		//ProjName("Apka Nati"),
+		ProjName("Java Demo Project"),		
 //-----Main Label: Default Description Part 1
 				lblMainDefDescP1(getTextDesc("lblMainDefDescP1")),
 //-----Main Label: Default Description Part 2

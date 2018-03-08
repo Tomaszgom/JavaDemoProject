@@ -18,7 +18,8 @@ public class JDBConnection {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			//connT1= DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/xe","javauser","Password");
 			
-			connT1= DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/xe","javauser","Password");
+			//connT1= DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/xe","javauser","Password");
+			connT1= DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/xe","hr","Password");
 			/*		
 			 "jdbc:oracle:thin:@localhost:1521:xe","Admin","Password"
 			 Connection URL:"jdbc:oracle:thin:@localhost:1521:xe"

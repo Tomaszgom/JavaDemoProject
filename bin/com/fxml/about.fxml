@@ -12,22 +12,22 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="432.0" prefWidth="679.0" VBox.vgrow="ALWAYS">
       <children>
-            <ImageView fitHeight="108.0" fitWidth="164.0" layoutX="48.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="186.0" fitWidth="197.0" layoutX="761.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../jpg/blueTrianglesSmall.jpg" />
+                  <Image url="@../jpg/TGomoradzki.jpg" />
                </image>
             </ImageView>
-        <Label alignment="CENTER" layoutX="350.0" layoutY="14.0" prefHeight="36.0" prefWidth="269.0" style="&#10;" text="About Java Demo Project" textAlignment="CENTER" textFill="#111111" wrapText="true">
+        <Label alignment="CENTER" layoutX="297.0" layoutY="14.0" prefHeight="36.0" prefWidth="339.0" style="&#10;" text="About Java Demo Project" textAlignment="CENTER" textFill="#111111" wrapText="true">
           <font>
             <Font name="System Bold" size="18.0" />
           </font>
         </Label>
-            <Label layoutX="225.0" layoutY="50.0" prefHeight="108.0" prefWidth="668.0" text="Java Demo Project is fully functional stand-alone application. It has been developed to present sample of my programming skills and understanding of related concepts." textAlignment="JUSTIFY" textFill="#111111" wrapText="true">
+            <Label layoutX="41.0" layoutY="58.0" prefHeight="95.0" prefWidth="668.0" text="Hi, my name is Tomasz Gomoradzki, I am the author of Java Demo Project. It is a stand-alone, self explanatory application which consist of several sub-program. Demo Project has been developed to present extensive sample of my programming skills and understanding of related concepts and should be considered as part of my portfolio." textAlignment="JUSTIFY" textFill="#111111" wrapText="true">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="48.0" layoutY="158.0" prefHeight="85.0" prefWidth="908.0" text="Demo Project guides user through each section with descriptions and in some cases UML diagrams, however to get in-depth idea on how does it work in the background, it should be reviewed along with available source code. " textAlignment="JUSTIFY" textFill="#111111" wrapText="true">
+            <Label layoutX="41.0" layoutY="163.0" prefHeight="95.0" prefWidth="668.0" text="Demo Project guides user through each section with descriptions, additional information and in some cases UML diagrams, however to get in-depth idea on how does it work in the background, it recommended to review it along with available source code. " textAlignment="JUSTIFY" textFill="#111111" wrapText="true">
                <font>
                   <Font size="15.0" />
                </font>
@@ -37,8 +37,9 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="42.0" layoutY="456.0" prefHeight="53.0" prefWidth="920.0" text="To see more technical details be sure to read information on right hand pane on main scrren." wrapText="true" />
-            <Label layoutX="41.0" layoutY="243.0" prefHeight="85.0" prefWidth="908.0" text="Application uses Java 8, JavaFX, including FXML, CSS, Controlers classes. For the most part it has been developed based on Model View Controller architectural pattern. From a MVC perspective, the FXML file describes user interface is the view. The controller is a Java class is declared as the controller for the view. The model consists of classes, interface, object on the Java side, that handles the application background logic and connects to the view through the controller." textAlignment="JUSTIFY" wrapText="true" />
+            <Label layoutX="35.0" layoutY="395.0" prefHeight="36.0" prefWidth="920.0" text="To see more technical details be sure to read information in the right pane of main application scrren." wrapText="true" />
+            <Label layoutX="41.0" layoutY="287.0" prefHeight="85.0" prefWidth="908.0" text="Application uses Java 8, JavaFX, including FXML, CSS, Controlers classes. For the most part it has been developed based on Model View Controller architectural pattern. From a MVC perspective, the FXML file describes user interface is the view. The controller is a Java class is declared as the controller for the view. The model consists of classes, interface, object on the Java side, that handles the application background logic and connects to the view through the controller." textAlignment="JUSTIFY" wrapText="true" />
+            <Label layoutX="35.0" layoutY="448.0" text="In case of any questions do not hesitate to contact me at t.gomoradzki@gmail.com" />
       </children>
          <effect>
             <ColorAdjust />

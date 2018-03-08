@@ -21,7 +21,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			
-			//01
+			
 	//---------welcomeScreen--------------------
 			//BorderPane root = new BorderPane();
 /*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/welcomeScr.fxml"));
@@ -32,10 +32,26 @@ public class Main extends Application {
 			primaryStage.show();*/
 			
 	//---------------DemoMain--------------------		
-/*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/DemoMain.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/DemoMain.fxml"));
 			Scene scene = new Scene(root,1331.0,742.0);
 			//scene.getStylesheets().add(getClass().getResource("/com/css/welcomeScreen.css").toExternalForm());
 			primaryStage.setTitle(publConst.ProjName.getText());
+			primaryStage.setScene(scene);
+			primaryStage.show();
+			
+	//-------------- jdbc_jtable ----------		
+/*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/jdbc_jtable.fxml"));	
+			Scene scene = new Scene(root,873.0,554.0);
+			//scene.getStylesheets().add(getClass().getResource("/com/css/welcomeScreen.css").toExternalForm());
+			//primaryStage.setTitle(publConst.ProjName.getText());
+			primaryStage.setScene(scene);
+			primaryStage.show();*/
+			
+	//-------------- Input output ----------		
+/*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/inOutput.fxml"));	
+			Scene scene = new Scene(root,881.0,537.0);
+			//scene.getStylesheets().add(getClass().getResource("/com/css/welcomeScreen.css").toExternalForm());
+			//primaryStage.setTitle(publConst.ProjName.getText());
 			primaryStage.setScene(scene);
 			primaryStage.show();*/
 			
@@ -47,7 +63,7 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();*/
 			
-	// ------------------ Composition
+	// ---------------- Composition
 /*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/composition.fxml"));	
 			Scene scene = new Scene(root,978.0,614.0);
 			//scene.getStylesheets().add(getClass().getResource("/com/css/welcomeScreen.css").toExternalForm());
@@ -55,7 +71,7 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();*/
 			
-// ------------------ Composition
+// ------------------ Encapsulation
 /*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/encapsulation.fxml"));	
 			Scene scene = new Scene(root,1039.0,667.0);
 			//scene.getStylesheets().add(getClass().getResource("/com/css/welcomeScreen.css").toExternalForm());
@@ -73,20 +89,20 @@ public class Main extends Application {
 			
 			
 // ------------------ designPatterns_Strategy
-/*						Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/designPatterns_Strategy.fxml"));			
-						Scene scene = new Scene(root,1003.0,629.0);
-						//scene.getStylesheets().add(getClass().getResource("/com/css/welcomeScreen.css").toExternalForm());
-						//primaryStage.setTitle(publConst.ProjName.getText());
-						primaryStage.setScene(scene);
-						primaryStage.show();*/
+/*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/designPatterns_Strategy.fxml"));			
+			Scene scene = new Scene(root,1003.0,629.0);
+			//scene.getStylesheets().add(getClass().getResource("/com/css/welcomeScreen.css").toExternalForm());
+			//primaryStage.setTitle(publConst.ProjName.getText());
+			primaryStage.setScene(scene);
+			primaryStage.show();*/
 
 // ------------------ designPatterns Factory
-/*						Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/designPatterns_Factory.fxml"));			
-						Scene scene = new Scene(root,1003.0,629.0);
-						//scene.getStylesheets().add(getClass().getResource("/com/css/welcomeScreen.css").toExternalForm());
-						//primaryStage.setTitle(publConst.ProjName.getText());
-						primaryStage.setScene(scene);
-						primaryStage.show();	*/		
+/*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/designPatterns_Factory.fxml"));			
+			Scene scene = new Scene(root,1003.0,629.0);
+			//scene.getStylesheets().add(getClass().getResource("/com/css/welcomeScreen.css").toExternalForm());
+			//primaryStage.setTitle(publConst.ProjName.getText());
+			primaryStage.setScene(scene);
+			primaryStage.show();	*/		
 			
 	//--------------- threadsMain----------	
 			
@@ -105,10 +121,10 @@ public class Main extends Application {
 */			
 			
 	// ------------------ Video Game 2D
-			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/videoGame2D.fxml"));	
+/*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/videoGame2D.fxml"));	
 			Scene scene = new Scene(root,736.0,400.0);
 			primaryStage.setScene(scene);
-			primaryStage.show();	
+			primaryStage.show();	*/
 			
 			
 						

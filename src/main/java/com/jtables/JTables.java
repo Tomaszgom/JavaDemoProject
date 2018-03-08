@@ -4,15 +4,11 @@ package com.jtables;
 	import java.awt.event.ActionEvent;
 	import java.awt.event.ActionListener;
 
-		// Needed to track when the user clicks on a table cell
 	import java.awt.event.MouseAdapter;
 	import java.awt.event.MouseEvent;
-
-		//The API for accessing and processing data stored in a database
+	import java.io.IOException;
 	import java.sql.*;
 	import java.text.ParseException;
-
-		// Allows you to convert from string to date or vice versa
 	import java.text.SimpleDateFormat;
 	import javax.swing.JButton;
 	import javax.swing.JFrame;
@@ -24,18 +20,15 @@ package com.jtables;
 	import javax.swing.JTextField;
 	import javax.swing.table.DefaultTableModel;
 
-
-
 	public class JTables extends JFrame{
 		
 		static JLabel lTopHeader, lFirstName, lLastName, lCity, lPoints, lLastLoginDate;		
 		static JTextField tfFirstName, tfLastName, tfCity, tfPoints, tfLastLoginDate;
-		//static java.util.Date dateBirthDate, sqlBirthDate;
 		static java.util.Date dateLastLoginDate, sqlLastLoginDate;
 		static ResultSet rows;		
-		// Holds column names for the table		
+			// column names for table		
 		static Object[] columns = {"Client ID", "First Name", "Last Name", "City", "Points", "Last Login Date"};		
-		// Holds row values for the table		
+			// Holds row values for the table		
 		static Object[][] databaseResults;
 				
 			// DefaultTableModel defines the methods JTable will use (overriding the getColumnClass method)		
@@ -43,11 +36,11 @@ package com.jtables;
 	        public Class getColumnClass(int column) {
 	            Class returnValue;
 	            
-	            	// Verifying that the column exists (index > 0 && index < number of column
+	            	// check if column exists
 	            if ((column >= 0) && (column < getColumnCount())) {
 	              returnValue = getValueAt(0, column).getClass();
 	            } else {
-	            	// Returns the class for the item in the column	
+	            	// Returns the class of the item in the column	
 	              returnValue = Object.class;
 	            }
 	            return returnValue;
@@ -56,18 +49,22 @@ package com.jtables;
 	        
 	        		// Create a JTable using the custom DefaultTableModel	        
 	        static JTable table = new JTable(dTableModel);
+	        
+	        public static void main(String[] args){	
+	        	OpenJTable("//localhost","1521","javauser","password");
+	        }
 		
-		public static void main(String[] args){		
+		public static void OpenJTable(String host, String port, String userName, String password){		
 			
 			JFrame frame = new JFrame();
-		    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		   // frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 				    	
 	    	Connection conn = null;	    	
 	        try {	          	           
 	            Class.forName("oracle.jdbc.driver.OracleDriver");// forName dynamically loads the class
 	                        
-	          //conn = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/xe","javauser","password");
-	          conn = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/xe","hr","password");   
+	          //conn = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/xe","javauser","password");  
 	            // Statement objects executes a SQL query createStatement returns a Statement object
 	            //ResultSet Reflects Changes in the databas
 	            //TYPE_SCROLL_SENSITIVE - domyœlnie prze result set mo¿na przejœæ tylko raz od 1 do ostatniego rzedu, dziêki temu mo¿na przewijaæ
@@ -75,12 +72,21 @@ package com.jtables;
 	            //CONCUR_UPDATABLE	-	Allows Modification to Data in a Table through the ResultSet
 	            //pozwala na aktualizowanie bazy danych zawsze kiedy tylko zmiany robione s¹ w JTable/
 	            //make a result set that is scrollable and (in)sensitive to updates by others, and that is updatable. 
-	            
+	          
+	          conn = DriverManager.getConnection("jdbc:oracle:thin:@"+host+":"+port+"/xe",userName,password);
+	          
 	            Statement sqlState = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, 
 	            		ResultSet.CONCUR_UPDATABLE);
 	            
-	            //query I'm sending to the database	            
-	            String sqlSelect = "SELECT CLIENT_ID, FIRST_NAME, LAST_NAME, CITY, POINTS, LAST_LOGIN_DATE FROM HR.CLIENT";
+	            //Read Select from SQL file 	            
+	            //String sqlSelect = "SELECT CLIENT_ID, FIRST_NAME, LAST_NAME, CITY, POINTS, LAST_LOGIN_DATE FROM HR.CLIENT";
+	            String sqlSelect = null;
+	            try{
+	            	sqlSelect = LoadSQL.ReadSelect();
+	            }catch(IOException ex){
+		        	ex.printStackTrace();
+		        	JOptionPane.showMessageDialog(null, "IOException: " + ex.getMessage(),"Error", JOptionPane.ERROR_MESSAGE);
+	            }
 	            
 	            // A ResultSet contains a table of data representing the
 	            // results of the query. It can not be changed and can 
@@ -122,12 +128,10 @@ package com.jtables;
 				e.printStackTrace();
 			} 
 	        
-	        		// Increase the font size for the cells in the table	        
-	        table.setFont(new Font("Serif", Font.PLAIN, 16));	        
-	        		// Increase the size of the cells to allow for bigger fonts	        
-	        table.setRowHeight(table.getRowHeight()+16);	        
-	        		// Allows the user to sort the data		    
-		    table.setAutoCreateRowSorter(true);		    
+        
+	        table.setFont(new Font("Serif", Font.PLAIN, 16));	               
+	        table.setRowHeight(table.getRowHeight()+16);	        	    
+		    table.setAutoCreateRowSorter(true);		//enabling data sorting    
 		    	// Adds the table to a scrollpane	    
 		    JScrollPane scrollPane = new JScrollPane(table);
 		    
@@ -140,13 +144,11 @@ package com.jtables;
 		    JButton addPres = new JButton("Add Client");
 		    
 		    addPres.addActionListener(new ActionListener(){
-		    
+		   // --- On action Add Client pressed
 		    	public void actionPerformed(ActionEvent e){
 		    		
-		    		String sFirstName = "", sLastName = "", sCity = "", sPoints = "", sLDate = "";
-		    		
-		    		// getText returns the value in the text field
-		    		
+		    		String sFirstName = "", sLastName = "", sCity = "", sPoints = "", sLDate = "";	    		
+		    		// getText from fields    		
 		    		sFirstName = tfFirstName.getText();
 		    		sLastName = tfLastName.getText();
 		    		sCity = tfCity.getText();
@@ -160,7 +162,7 @@ package com.jtables;
 						rows.moveToInsertRow();
 						
 						// Update the values in the database		
-						rows.updateInt("CLIENT_ID", 144);
+						rows.updateInt("CLIENT_ID", 150);
 						rows.updateString("FIRST_NAME", sFirstName);
 						rows.updateString("LAST_NAME", sLastName);
 						rows.updateString("CITY", sCity);
@@ -170,7 +172,7 @@ package com.jtables;
 							// Inserts the changes to the row values in the database
 						rows.insertRow();						
 							// Directly updates the values in the database
-						rows.updateRow();
+	//					rows.updateRow();
 						
 					} catch (SQLException e1) {						
 						e1.printStackTrace();
@@ -262,17 +264,17 @@ package com.jtables;
 		    frame.add(TopPanel, BorderLayout.NORTH);
 		    frame.add(inputPanel, BorderLayout.CENTER);
 		    
-		    // When the user clicks on a cell they'll be able to change the value
-		    
+	// --- Mouse Listener change Value box
 		    table.addMouseListener(new MouseAdapter(){  
 		    	public void mouseReleased(MouseEvent me){
 		            String value = JOptionPane.showInputDialog(null,"Enter Cell Value:"); 
 		            
 		            	// Makes sure a value is changed only if OK is clicked		            
-		            if (value != null)  
-		            {  
+		            if (value != null) {  
 		                table.setValueAt(value, table.getSelectedRow(), table.getSelectedColumn());  
-		            }  
+		            }else {
+		            	return;
+		            }
 		            
 		            try {
 		            	// Move to the selected row		            	
@@ -282,7 +284,7 @@ package com.jtables;
 			            
 			            String updateCol = dTableModel.getColumnName(table.getSelectedColumn());			   
 			            int updateColNb = table.getSelectedColumn();
-			            JOptionPane.showMessageDialog(null, "table.getSelectedColumn()"+updateColNb);
+			           // JOptionPane.showMessageDialog(null, "table.getSelectedColumn()"+updateColNb);
 			            
 		            	switch (updateCol) {
 		            	
@@ -296,26 +298,17 @@ package com.jtables;
 		            			break;
 		            		
 		            		default: 
-		            			System.out.println("Start ca");
-		            	
-		            			//rows.updateString(updateCol, value);
-		            		
-		            			rows.updateString(updateColNb, value);
-		            					            			
+		            			System.out.println("Start ca");		            	
+		            			//rows.updateString(updateCol, value);		            		
+		            			rows.updateString(updateColNb, value);		            					            			
 		            			System.out.println("Stop ca");
-		            		
-		            			
-		            			System.out.println("Current Row: " + rows.getRow());
-		            			
-		    					rows.updateRow();
-		    					
+		            			System.out.println("Current Row: " + rows.getRow());		            			
+		    					rows.updateRow();		    					
 		            			break;		            			
 		            	}
 		            			            	
-					} catch (SQLException e) {
-						
-						// Commented out so the user can delete rows
-						JOptionPane.showMessageDialog(null, "VendorError: " + e.getMessage(),"Error", JOptionPane.ERROR_MESSAGE);
+					} catch (SQLException e) {						
+						JOptionPane.showMessageDialog(null, "DB Error: " + e.getMessage(),"Error", JOptionPane.ERROR_MESSAGE);
 						 e.printStackTrace();
 					} 
 		    	} 
@@ -326,7 +319,7 @@ package com.jtables;
 			
 		}
 		
-				//convert from string to date		
+				//Format String to  date		
 		public static java.util.Date getADate(String sDate){			
 			SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd");
 			
@@ -340,14 +333,3 @@ package com.jtables;
 		}
 		
 	}
-
-
-	/*
-	 * ALTER TABLE president
-	   ADD COLUMN pres_id INT AUTO_INCREMENT NOT NULL FIRST,
-	   ADD PRIMARY KEY(pres_id);
-	   
-	   alter table president modify city varchar(20); # Allow city to be NULL
-	   
-	   delete from president where pres_id = 42;
-	 */
