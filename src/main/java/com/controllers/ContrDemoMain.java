@@ -104,29 +104,144 @@ public class ContrDemoMain {
 	        });        
         } catch (IOException ex) {ex.printStackTrace();} 	
     }
-    @FXML
-    public void ActButbutDesignPatt_Strategy(ActionEvent ev) {
-    	Parent root;
-        try {
-        	root = FXMLLoader.load(getClass().getResource("/com/fxml/designPatterns_Strategy.fxml"));
-            Stage stageDesignPatt_Strategy = new Stage();
-            stageDesignPatt_Strategy.setTitle("Strategy");
-            stageDesignPatt_Strategy.setScene(new Scene(root, 1003.0, 629.0));
-            stageDesignPatt_Strategy.show();          
-            stageDesignPatt_Strategy.setOnCloseRequest(new EventHandler<WindowEvent>() {
-	            public void handle(WindowEvent we) {
-	                System.out.println("stageDesignPatt_Strategy is closing");
-	            }
-	        });           
-        } catch (IOException ex) {ex.printStackTrace();} 	
-    }
+
 
     
     @FXML
-    public void ActButThread(ActionEvent ev) {
-    	System.out.println("Thread button clicked");
-     	
-    }   
+    public void ActButComposition(ActionEvent ev) {
+    		try {
+    			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/composition.fxml"));	
+    			Scene scene = new Scene(root,978.0,614.0);
+    			Stage stageComposition = new Stage();
+    			stageComposition.setScene(scene);
+    			stageComposition.show();
+    		} catch(Exception e) {
+    			e.printStackTrace();
+    		}
+    }
+    @FXML
+    public void ActButEncapsulation(ActionEvent ev) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/encapsulation.fxml"));	
+			Scene scene = new Scene(root,1039.0,667.0);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+    }
+    @FXML
+    public void ActButHashMapGame(ActionEvent ev) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/hashMapGame.fxml"));	
+			Scene scene = new Scene(root,1024.0,736.0);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+    }
+    @FXML
+    public void ActButJdbc_jtable(ActionEvent ev) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/jdbc_jtable.fxml"));	
+			Scene scene = new Scene(root,873.0,554.0);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+    }
+    @FXML
+    public void ActButProjectScheduler(ActionEvent ev) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/collectProjectScheduler.fxml"));	
+			Scene scene = new Scene(root,1120.0,755.0);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+    }
+    @FXML
+    public void ActButThreads(ActionEvent ev) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/threadsMain.fxml"));	
+			Scene scene = new Scene(root,682.0,416.0);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+    }
+    @FXML
+    public void ActButInOutPut(ActionEvent ev) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/inOutput.fxml"));	
+			Scene scene = new Scene(root,881.0,537.0);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+    }
+    @FXML
+    public void ActButDesignPatterns_Factory(ActionEvent ev) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/designPatterns_Factory.fxml"));	
+			Scene scene = new Scene(root,1003.0,629.0);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+    }
+    @FXML
+    public void ActButDesignPatterns_Observer(ActionEvent ev) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/about.fxml"));	
+			Scene scene = new Scene(root, 1003.0, 629.0);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+    }
+    @FXML
+    public void ActButDesignPatterns_Strategy(ActionEvent ev) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/designPatterns_Strategy.fxml"));	
+			Scene scene = new Scene(root,1003.0,629.0);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+    }
+    @FXML
+    public void ActButVideoGame2D(ActionEvent ev) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/videoGame2D.fxml"));	
+			Scene scene = new Scene(root,736.0,400.0);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+    }
+    
+    
+    
     
     
   //--------------------About button 'onMouseEntered' method-----------------------
@@ -139,17 +254,121 @@ public class ContrDemoMain {
     lblMain.setText(lblMainDefDesc);
     lblRightPane.setText(lblRightPaneDefDesc);
     }
-    
-    //--------------------Threads-----------------------   
-    public void ActButThreads() {
-    lblMain.setText("Threads Start");
+   //--------------------Composition button 'onMouseEntered' method-----------------------
+    @FXML
+    public void butCompositionMosEtr() {
+    lblMain.setText(publConst.lblMainComposition.getText());
+    lblRightPane.setText(publConst.lblRightComposition.getText());
     }
-    //--------------------Design Patterns-----------------------   
-    public void ActButDesignPatterns() {
-    lblMain.setText("Design Patterns clicked");
+    public void butCompositionMosExt() {
+    lblMain.setText(lblMainDefDesc);
+    lblRightPane.setText(lblRightPaneDefDesc);
+    }
+    //--------------------butEncapsulation button 'onMouseEntered' method-----------------------
+    @FXML
+    public void butEncapsulationMosEtr() {
+    lblMain.setText(publConst.lblMainEncapsulation.getText());
+    lblRightPane.setText(publConst.lblRightEncapsulation.getText());
+    }
+    public void butEncapsulationMosExt() {
+    lblMain.setText(lblMainDefDesc);
+    lblRightPane.setText(lblRightPaneDefDesc);
+    }
+    //--------------------butHashMapGame button 'onMouseEntered' method-----------------------
+    @FXML
+    public void butHashMapGameMosEtr() {
+    lblMain.setText(publConst.lblMainHashMapGame.getText());
+    lblRightPane.setText(publConst.lblRightHashMapGame.getText());
+    }
+    public void butHashMapGameMosExt() {
+    lblMain.setText(lblMainDefDesc);
+    lblRightPane.setText(lblRightPaneDefDesc);
+    }
+    //--------------------butJdbc_jtable button 'onMouseEntered' method-----------------------
+    @FXML
+    public void butJdbc_jtableMosEtr() {
+    lblMain.setText(publConst.lblMainJdbc_jtable.getText());
+    lblRightPane.setText(publConst.lblRightJdbc_jtable.getText());
+    }
+    public void butJdbc_jtableMosExt() {
+    lblMain.setText(lblMainDefDesc);
+    lblRightPane.setText(lblRightPaneDefDesc);
+    }
+    //--------------------butProjectScheduler button 'onMouseEntered' method-----------------------
+    @FXML
+    public void butProjectSchedulerMosEtr() {
+    lblMain.setText(publConst.lblMainProjectScheduler.getText());
+    lblRightPane.setText(publConst.lblRightProjectScheduler.getText());
+    }
+    public void butProjectSchedulerMosExt() {
+    lblMain.setText(lblMainDefDesc);
+    lblRightPane.setText(lblRightPaneDefDesc);
+    }
+    //--------------------butThreads button 'onMouseEntered' method-----------------------
+    @FXML
+    public void butThreadsMosEtr() {
+    lblMain.setText(publConst.lblMainThreads.getText());
+    lblRightPane.setText(publConst.lblRightThreads.getText());
+    }
+    public void butThreadsMosExt() {
+    lblMain.setText(lblMainDefDesc);
+    lblRightPane.setText(lblRightPaneDefDesc);
+    }
+    //--------------------butInOutPut button 'onMouseEntered' method-----------------------
+    @FXML
+    public void butInOutPutMosEtr() {
+    lblMain.setText(publConst.lblMainInOutPut.getText());
+    lblRightPane.setText(publConst.lblRightInOutPut.getText());
+    }
+    public void butInOutPutMosExt() {
+    lblMain.setText(lblMainDefDesc);
+    lblRightPane.setText(lblRightPaneDefDesc);
+    }
+    //--------------------butDesignPatterns_Factory button 'onMouseEntered' method-----------------------
+    @FXML
+    public void butDesignPatterns_FactoryMosEtr() {
+    lblMain.setText(publConst.lblMainDesignPatterns_Factory.getText());
+    lblRightPane.setText(publConst.lblRightDesignPatterns_Factory.getText());
+    }
+    public void butDesignPatterns_FactoryMosExt() {
+    lblMain.setText(lblMainDefDesc);
+    lblRightPane.setText(lblRightPaneDefDesc);
+    }
+    //--------------------butDesignPatterns_Observer button 'onMouseEntered' method-----------------------
+    @FXML
+    public void butDesignPatterns_ObserverMosEtr() {
+    lblMain.setText(publConst.lblMainDesignPatterns_Observer.getText());
+    lblRightPane.setText(publConst.lblRightDesignPatterns_Observer.getText());
+    }
+    public void butDesignPatterns_ObserverMosExt() {
+    lblMain.setText(lblMainDefDesc);
+    lblRightPane.setText(lblRightPaneDefDesc);
+    }
+    //--------------------butDesignPatterns_Strategy button 'onMouseEntered' method-----------------------
+    @FXML
+    public void butDesignPatterns_StrategyMosEtr() {
+    lblMain.setText(publConst.lblMainDesignPatterns_Strategy.getText());
+    lblRightPane.setText(publConst.lblRightDesignPatterns_Strategy.getText());
+    }
+    public void butDesignPatterns_StrategyMosExt() {
+    lblMain.setText(lblMainDefDesc);
+    lblRightPane.setText(lblRightPaneDefDesc);
+    }
+    //--------------------butVideoGame2D button 'onMouseEntered' method-----------------------
+    @FXML
+    public void butVideoGame2DMosEtr() {
+    lblMain.setText(publConst.lblMainVideoGame2D.getText());
+    lblRightPane.setText(publConst.lblRightVideoGame2D.getText());
+    }
+    public void butVideoGame2DMosExt() {
+    lblMain.setText(lblMainDefDesc);
+    lblRightPane.setText(lblRightPaneDefDesc);
     }
  
     
+    
+    
+/////////////////////////////////////////////////////////////////////   
     //--------------------Menu Items Actions------------
     public void ActMenuQuit() {
     	System.exit(0);

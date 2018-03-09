@@ -1,0 +1,1 @@
+This module presents example of Composition used as programming concept.

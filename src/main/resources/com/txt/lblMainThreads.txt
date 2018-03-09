@@ -1,1 +1,1 @@
-Presentation of threads with Java Concurrency using UI windows including Runnable, Task implementation.
+This program is designed to show usage, behaviour and interactions of Java Threads. It is designed to be a graphical presentation and beside starting pressing 'Start' button it does not require any particular usage actions.

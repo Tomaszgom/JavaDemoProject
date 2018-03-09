@@ -1,0 +1,1 @@
+This application module incorporates Collections, including Observable list, LinkedList, ArrayList, ojects Inheritance, java.time library, Comparable Interface implementation, Comparator, sorting and many more.

@@ -65,7 +65,7 @@ public class ContrWelcomeScreen {
                        
         } else if(e.getSource().equals(butExit)) {
             System.out.println("Exit clicked, bye!");
-            primaryStage.
+           // primaryStage.
             System.exit(0);
         }
           
