@@ -14,12 +14,12 @@ public class Output {
     		BufferedWriter dirFile = new BufferedWriter(new FileWriter("directions.txt"))) {
             
         	
-        	for(Location location : locations.values()) {
+/*        	for(Location location : locations.values()) {
                 locFile.write(location.getLocationID() + "," + location.getDescription() + "\n");
                 for(String direction : location.getExits().keySet()) {
                     dirFile.write(location.getLocationID() + "," + direction + "," + location.getExits().get(direction) + "\n");
                 }
-            }
+            }*/
         }
 //        FileWriter locFile = null;
 //        try {
@@ -46,7 +46,7 @@ public class Output {
                 String description = scanner.nextLine();
                 System.out.println("Imported loc: " + loc + ": " + description);
                 Map<String, Integer> tempExit = new HashMap<>();
-                locations.put(loc, new Location(loc, description, tempExit));
+  //              locations.put(loc, new Location(loc, description, tempExit));
             }
 
         } catch(IOException e) {
@@ -69,8 +69,8 @@ public class Output {
                 int destination = Integer.parseInt(data[2]);
 
                 System.out.println(loc + ": " + direction + ": " + destination);
-                Location location = locations.get(loc);
-                location.addExit(direction, destination);
+    //            Location location = locations.get(loc);
+    //            location.addExit(direction, destination);
             }
         } catch (IOException e) {
             e.printStackTrace();
