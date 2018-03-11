@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -41,8 +42,8 @@ public class ContrWelcomeScreen {
     }
 
     @FXML
-    public void ActBut(ActionEvent e) {
-        if(e.getSource().equals(butContinue)) {
+    public void ActBut(ActionEvent ev) {
+        if(ev.getSource().equals(butContinue)) {
             System.out.println("Continue button clicked.");
         
             try {
@@ -52,10 +53,12 @@ public class ContrWelcomeScreen {
 			stagedemoMain.setTitle(publConst.ProjName.getText());
 			stagedemoMain.setScene(scene);
 			stagedemoMain.show();
+			//Hide Welcome screen
+	        ((Node)(ev.getSource())).getScene().getWindow().hide();
+			
 			stagedemoMain.setOnCloseRequest(new EventHandler<WindowEvent>() {
     	            public void handle(WindowEvent we) {
     	                System.out.println("Demo Main Stage is closing");
-    	                //primaryStage.hide
     	            }
     	        });
                 
@@ -63,7 +66,7 @@ public class ContrWelcomeScreen {
                 ex.printStackTrace();
             } 
                        
-        } else if(e.getSource().equals(butExit)) {
+        } else if(ev.getSource().equals(butExit)) {
             System.out.println("Exit clicked, bye!");
            // primaryStage.
             System.exit(0);
