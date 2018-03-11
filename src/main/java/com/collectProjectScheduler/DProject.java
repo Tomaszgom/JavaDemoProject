@@ -43,13 +43,14 @@ public class DProject {
 		for (PStagePro stage : this.getProjectStages()) {
 			
 			if(!stage.getPStageTasks().isEmpty()) {
-			out.append("------------Stage '"+stage.GetStageName()+"' details ----------------"+"\n");
+			out.append("------------  Stage '"+stage.GetStageName()+"' details  ----------------"+"\n");
 			out.append("The stage lasts "+stage.getNumbOfDaysInStage()+" days from the beginning to the end."+"\n");
 			out.append("Stage completion rate is "+stage.getProgressPercent()+"%."+"\n");
 			out.append("Min Time Task lasts "+stage.getTasksMinTime()+ " days."+"\n");
 			out.append("Max Time Task lasts "+stage.getTasksMaxTime()+ " days."+"\n");
 			out.append("Avg Time Task lasts "+stage.getTasksAvgTime()+ " days."+"\n"+"\n");
-			out.append("------------ Stage '"+stage.GetStageName()+"' tasks sorted by Start date ----------"+"\n");
+		//	out.append("------------ Stage '"+stage.GetStageName()+"' tasks sorted by Start date ----------"+"\n");
+			out.append("Tasks sorted by Start date:"+"\n");
 			out.append(stage.GetPrintPStageTasksSortedbyStartDate()+"\n");
 			}
 		}			

@@ -1,0 +1,1 @@
+Under construction...this module will present Decorator Pattern usage example. It is advised to review the source code.

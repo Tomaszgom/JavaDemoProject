@@ -8,8 +8,8 @@ import javax.swing.JOptionPane;
 public class Input {
 	
     public static void main(String[] args) throws IOException {
-    	//ReadFromPlain();
-    	ReadFromFormatted();
+    	ReadFromPlain();
+    	//ReadFromFormatted();
     }
 	
 	public static void ReadFromPlain() throws IOException{

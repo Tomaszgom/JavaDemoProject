@@ -1,0 +1,1 @@
+Under construction...this module will present Adapter Pattern usage example. It is advised to review the source code.

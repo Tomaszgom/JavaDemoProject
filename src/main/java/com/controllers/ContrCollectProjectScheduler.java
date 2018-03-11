@@ -185,7 +185,7 @@ public class ContrCollectProjectScheduler {
 	    		        	        	    	
 	        System.out.println(txtfTaskName.getText().trim());
 	        System.out.println(txtfStageName.getText().trim());
-	        System.out.println(txtfOutput.getText().trim());	    		
+	      //  System.out.println(txtfOutput.getText().trim());	    		
 	        System.out.println(comBoxPriority.getValue());
 	        System.out.println(comBoxStatus.getValue());
 	        System.out.println(datePickStart.getValue());

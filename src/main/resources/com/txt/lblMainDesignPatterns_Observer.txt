@@ -1,1 +1,1 @@
-Under construction...this module will present example use of Observer Pattern. It is advised to review source code as well.
+Under construction...this module will present example of Observer Pattern usage. It is recommended to review source code.
