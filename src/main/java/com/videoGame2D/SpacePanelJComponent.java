@@ -23,7 +23,7 @@ public class SpacePanelJComponent extends JComponent{
 		
 			// Space JComponent Constructor
 		public SpacePanelJComponent() { 		
-			for(int i = 0; i < 30; i++){ //add stars to list to be shown on screen			
+			for(int i = 0; i < 25; i++){ //add stars to list to be shown on screen			
 								
 				Star tempStar;
 				tempStar = new Star(Star.starStartXArr, Star.starStartYArr, 9, 0, 0);

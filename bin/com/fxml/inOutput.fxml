@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="537.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="537.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ContrInOutput">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="464.0" prefWidth="751.0" VBox.vgrow="ALWAYS">
       <children>
@@ -24,38 +24,38 @@
             <Font size="14.0" />
           </font>
         </Label>
-            <TextArea layoutX="60.0" layoutY="297.0" prefHeight="219.0" prefWidth="768.0" promptText="text" />
-            <Button layoutX="171.0" layoutY="179.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="159.0" text="Read from text file">
+            <TextArea fx:id="TxtArInOutput" layoutX="60.0" layoutY="297.0" prefHeight="219.0" prefWidth="768.0" promptText="text" />
+            <Button fx:id="butReadFromTxt" layoutX="171.0" layoutY="179.0" mnemonicParsing="false" onAction="#ActbutReadFromTxt" prefHeight="20.0" prefWidth="159.0" text="Read from text file">
                <font>
                   <Font size="12.0" />
                </font>
             </Button>
-            <Button layoutX="369.0" layoutY="217.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Save txt on my disc">
+            <Button fx:id="butSaveOnDisc" layoutX="369.0" layoutY="217.0" mnemonicParsing="false" onAction="#ActbutSaveOnDisc" prefHeight="25.0" prefWidth="159.0" text="Save txt on my disc">
                <font>
                   <Font size="12.0" />
                </font>
             </Button>
-            <Button layoutX="171.0" layoutY="217.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Read formated text">
+            <Button fx:id="butReadFromFormTxt" layoutX="171.0" layoutY="217.0" mnemonicParsing="false" onAction="#ActbutReadFromFormTxt" prefHeight="25.0" prefWidth="159.0" text="Read formated text">
                <font>
                   <Font size="12.0" />
                </font>
             </Button>
-            <Button layoutX="553.0" layoutY="179.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Read from binary file">
+            <Button fx:id="butReadFromBinaryFile" layoutX="553.0" layoutY="179.0" mnemonicParsing="false" onAction="#ActbutReadFromBinaryFile" prefHeight="25.0" prefWidth="159.0" text="Read from binary file">
                <font>
                   <Font size="12.0" />
                </font>
             </Button>
-            <Button layoutX="553.0" layoutY="217.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Save into binary file">
+            <Button fx:id="butSaveIntoBinaryFile" layoutX="553.0" layoutY="217.0" mnemonicParsing="false" onAction="#ActbutSaveIntoBinaryFile" prefHeight="25.0" prefWidth="159.0" text="Save into binary file">
                <font>
                   <Font size="12.0" />
                </font>
             </Button>
-            <Button layoutX="369.0" layoutY="179.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Open txt from my disc">
+            <Button fx:id="butOpenFromDisc" layoutX="369.0" layoutY="179.0" mnemonicParsing="false" onAction="#ActbutOpenFromDisc" prefHeight="25.0" prefWidth="159.0" text="Open txt from my disc">
                <font>
                   <Font size="12.0" />
                </font>
             </Button>
-            <TextField editable="false" layoutX="57.0" layoutY="253.0" prefHeight="31.0" prefWidth="768.0" />
+            <TextField fx:id="TxtFOutMessage" editable="false" layoutX="57.0" layoutY="253.0" prefHeight="31.0" prefWidth="768.0" />
             <Label layoutX="54.0" layoutY="83.0" prefHeight="74.0" prefWidth="768.0" text="Some incorporated components are FileReader, FileWriter, BufferedReader,  BufferedWriter, Catching IOExceptions, Try-with-resources Statement, Object input and output including Serialization, Libraries: java.io, java.util Side note: In this module Java I/O and sequential files access has been used." textAlignment="JUSTIFY" wrapText="true">
                <font>
                   <Font size="14.0" />

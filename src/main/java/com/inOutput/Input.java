@@ -12,11 +12,12 @@ public class Input {
     	//ReadFromFormatted();
     }
 	
-	public static void ReadFromPlain() throws IOException{
+	public static String ReadFromPlain() throws IOException{
 		
+		String input = "";
 		 //------  Read from plain text project local file with Buffer Reader    
 	     try (BufferedReader dirFile = new BufferedReader(new FileReader("./src/main/resources/com/txt/inOutput_plain.txt"))) {   	  	
-	    		String input;
+	    		
 	            while((input = dirFile.readLine()) != null) {  	            		            	
 	              System.out.println("File content: "+input);	              
 	            }
@@ -24,12 +25,14 @@ public class Input {
 	        	e.printStackTrace();
 	        	 JOptionPane.showMessageDialog(null, "IOException: " + e.getMessage(),"Error", JOptionPane.ERROR_MESSAGE);
 	       }
+	     return "File content: "+input;
 	}
     
-    public static void ReadFromFormatted() throws IOException {
-      //------  Read from formatted text project local file with Scanner Reader    
+    public static String ReadFromFormatted() throws IOException {
+      //------  Read from formatted text project local file with Scanner Reader  
+    	String input = "";
      try (Scanner scanner = new Scanner(new BufferedReader(new FileReader("./src/main/resources/com/txt/inOutput_formatted.txt")))) {   	  	
-    		String input;
+    		//String input;
              scanner.useDelimiter(",");
             while(scanner.hasNextLine()) {
       //-----------delimiter------------------------
@@ -40,12 +43,13 @@ public class Input {
                 String Col2 = scanner.nextLine();
       //-------------------------------------------     	        	          	
             	System.out.println(Num1 + "		" + Col1 + "	" + Col2);
+            	input = input + Num1 + "		" + Col1 + "	" + Col2 + "\n";
             }
         } catch (IOException e) {
             e.printStackTrace();
        	 JOptionPane.showMessageDialog(null, "IOException: " + e.getMessage(),"Error", JOptionPane.ERROR_MESSAGE);
         }
-
+     return input;
     }
 
 

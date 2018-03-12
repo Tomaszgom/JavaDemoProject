@@ -23,12 +23,14 @@ import javafx.application.Application;
 	
 	 
 	public final class ContrInOutput_Open extends Application {
+//		public final class ContrInOutput_Open {	
 	 
 	   // private Desktop desktop = Desktop.getDesktop();
 	 
 	    @Override
 	    public void start(final Stage stage) {
-	        stage.setTitle("File Chooser");
+	//	  public void main(final Stage stage) {
+	    	stage.setTitle("File Chooser");
 	 
 	        final FileChooser fileChooser = new FileChooser();	              		        
 	               configureFileChooser(fileChooser);
