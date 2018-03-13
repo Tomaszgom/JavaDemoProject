@@ -1,1 +1,1 @@
-Java Composition concept
+Java Composition and Encapsulation concepts

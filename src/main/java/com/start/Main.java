@@ -23,13 +23,22 @@ public class Main extends Application {
 			
 			
 	//---------welcomeScreen--------------------
-			//BorderPane root = new BorderPane();
 			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/welcomeScr.fxml"));
 			Scene scene = new Scene(root,980.0,579.0);
 			scene.getStylesheets().add(getClass().getResource("/com/css/welcomeScreen.css").toExternalForm());
 			primaryStage.setTitle(publConst.ProjName.getText());
 			primaryStage.setScene(scene);
 			primaryStage.show();
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 	//---------------DemoMain--------------------		
 /*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/DemoMain.fxml"));

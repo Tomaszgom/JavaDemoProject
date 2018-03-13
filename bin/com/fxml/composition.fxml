@@ -11,56 +11,57 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="528.0" prefWidth="978.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ContrComposition">
+<VBox prefHeight="628.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ContrComposition">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="555.0" prefWidth="978.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="568.0" prefWidth="1008.0" VBox.vgrow="ALWAYS">
       <children>
-            <ImageView fx:id="ImgVPink" fitHeight="295.0" fitWidth="561.0" layoutX="52.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="ImgVPink" fitHeight="295.0" fitWidth="561.0" layoutX="43.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../jpg/pimped.jpg" />
                </image>
             </ImageView>
-            <ImageView fx:id="ImgVMaserati" fitHeight="263.0" fitWidth="553.0" layoutX="69.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="ImgVMaserati" fitHeight="263.0" fitWidth="553.0" layoutX="60.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../jpg/maserati.jpg" />
                </image>
             </ImageView>
-        <Label alignment="CENTER" layoutX="309.0" layoutY="14.0" prefHeight="36.0" prefWidth="370.0" style="&#10;" text="Composition" textAlignment="CENTER" textFill="#111111" wrapText="true">
+        <Label alignment="CENTER" layoutX="309.0" layoutY="14.0" prefHeight="36.0" prefWidth="370.0" style="&#10;" text="Composition &amp; Encapsulation" textAlignment="CENTER" textFill="#111111" wrapText="true">
           <font>
             <Font name="System Bold" size="18.0" />
           </font>
         </Label>
-            <Button fx:id="butCheckTheCar" layoutX="645.0" layoutY="473.0" mnemonicParsing="false" onAction="#ActbutCheckTheCar" prefHeight="31.0" prefWidth="149.0" text="Check the Car" />
-            <TextField editable="false" layoutX="74.0" layoutY="364.0" prefHeight="25.0" prefWidth="70.0" text="Press. 3.2">
+            <Button fx:id="butCheckTheCar" layoutX="636.0" layoutY="574.0" mnemonicParsing="false" onAction="#ActbutCheckTheCar" prefHeight="31.0" prefWidth="149.0" text="Check the Car" />
+            <TextField editable="false" layoutX="65.0" layoutY="465.0" prefHeight="25.0" prefWidth="70.0" text="Press. 3.2">
                <font>
                   <Font size="12.0" />
                </font></TextField>
-            <TextField editable="false" layoutX="342.0" layoutY="433.0" prefHeight="25.0" prefWidth="70.0" text="Press. 3.0">
+            <TextField editable="false" layoutX="333.0" layoutY="534.0" prefHeight="25.0" prefWidth="70.0" text="Press. 3.0">
                <font>
                   <Font size="12.0" />
                </font></TextField>
-            <TextField editable="false" layoutX="521.0" layoutY="351.0" prefHeight="25.0" prefWidth="70.0" text="Press. 3.1">
+            <TextField editable="false" layoutX="512.0" layoutY="452.0" prefHeight="25.0" prefWidth="70.0" text="Press. 3.1">
                <font>
                   <Font size="12.0" />
                </font></TextField>
-            <TextField editable="false" layoutX="258.0" layoutY="257.0" prefHeight="25.0" prefWidth="70.0" text="Press. 3.2">
+            <TextField editable="false" layoutX="249.0" layoutY="358.0" prefHeight="25.0" prefWidth="70.0" text="Press. 3.2">
                <font>
                   <Font size="12.0" />
                </font></TextField>
-            <Button fx:id="butPimpMyRide" layoutX="807.0" layoutY="473.0" mnemonicParsing="false" onAction="#ActbutPimpMyRide" prefHeight="31.0" prefWidth="149.0" text="Pimp my ride" />
-            <Label layoutX="52.0" layoutY="50.0" prefHeight="54.0" prefWidth="901.0" text="Composition defines relation between classes as 'HAS A'. Super Class HAS A Sub-Class. In case of Inheritance which is more typical the relation is defined as 'IS A'. Sub-Class IS A Super-Class." wrapText="true" />
-            <Label layoutX="52.0" layoutY="104.0" prefHeight="94.0" prefWidth="901.0" text="In this simple Demo example Car is super class and is composed of subclasses, one engine and 4 wheels. Car has an engine. Car has wheels. Car class is created out of engine and 4 wheels. Whenever we need to check oil level or any other part of the car, we will first call car in which we have the engine. Engine has method that allows to check the oil level. It is advised to review this module along side with source code." wrapText="true" />
-            <TextArea fx:id="txtArOutput" editable="false" layoutX="632.0" layoutY="213.0" prefHeight="223.0" prefWidth="324.0" />
-            <TextField editable="false" layoutX="186.0" layoutY="315.0" prefHeight="36.0" prefWidth="135.0" text="Engine power: 605 HP">
+            <Button fx:id="butPimpMyRide" layoutX="798.0" layoutY="574.0" mnemonicParsing="false" onAction="#ActbutPimpMyRide" prefHeight="31.0" prefWidth="149.0" text="Pimp my ride" />
+            <Label layoutX="52.0" layoutY="50.0" prefHeight="54.0" prefWidth="894.0" text="Composition defines relation between classes as 'HAS A', so super class HAS A sub-class. In case of Inheritance which is more typical, the relation is defined as 'IS A'. Sub-Class IS A Super-Class." wrapText="true" />
+            <Label layoutX="44.0" layoutY="192.0" prefHeight="94.0" prefWidth="901.0" text="In this concept Demo example Car is super class and is composed of subclasses, one engine and 4 wheels. Car has an engine. Car has wheels. Car class is created out of engine and 4 wheels. Whenever we need to check oil level or any other part of the car, we will first call car in which we have the engine. Engine has method that allows to check the oil level. It is advised to review this module along side with source code." wrapText="true" />
+            <TextArea fx:id="txtArOutput" editable="false" layoutX="623.0" layoutY="314.0" prefHeight="223.0" prefWidth="324.0" />
+            <TextField editable="false" layoutX="177.0" layoutY="416.0" prefHeight="36.0" prefWidth="135.0" text="Engine power: 605 HP">
                <font>
                   <Font size="12.0" />
                </font>
             </TextField>
-            <TextField editable="false" layoutX="186.0" layoutY="358.0" prefHeight="36.0" prefWidth="88.0" text="Oil Level: 14">
+            <TextField editable="false" layoutX="177.0" layoutY="459.0" prefHeight="36.0" prefWidth="88.0" text="Oil Level: 14">
                <font>
                   <Font size="12.0" />
                </font>
             </TextField>
+            <Label layoutX="44.0" layoutY="104.0" prefHeight="82.0" prefWidth="901.0" text="Encapsulation allows to restrict external manipulation and access in general  to certain components in the object, allows to protect members of the class from external access in order to guard against unauthorized access. Changes within class will not affect external code. Constructor guaranties that all necessary variables are set once object is created." wrapText="true" />
       </children>
          <effect>
             <ColorAdjust />

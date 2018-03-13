@@ -120,18 +120,6 @@ public class ContrDemoMain {
     		}
     }
     @FXML
-    public void ActButEncapsulation(ActionEvent ev) {
-		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/encapsulation.fxml"));	
-			Scene scene = new Scene(root,1039.0,667.0);
-			Stage stage = new Stage();
-			stage.setScene(scene);
-			stage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-    }
-    @FXML
     public void ActButHashMapGame(ActionEvent ev) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/hashMapGame.fxml"));	
@@ -239,6 +227,30 @@ public class ContrDemoMain {
 			e.printStackTrace();
 		}
     }
+    @FXML
+    public void ActButDesignPatterns_Adapter(ActionEvent ev) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/about.fxml"));	
+			Scene scene = new Scene(root, 1003.0, 629.0);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+    }
+    @FXML
+    public void ActButDesignPatterns_Decorator(ActionEvent ev) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/about.fxml"));	
+			Scene scene = new Scene(root, 1003.0, 629.0);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+    }
     
     
     
@@ -250,6 +262,7 @@ public class ContrDemoMain {
     lblMain.setText(publConst.lblMainAbout.getText());
     lblRightPane.setText(publConst.lblRightAbout.getText());
     }
+    @FXML
     public void butAboutMosExt() {
     lblMain.setText(lblMainDefDesc);
     lblRightPane.setText(lblRightPaneDefDesc);
@@ -260,17 +273,8 @@ public class ContrDemoMain {
     lblMain.setText(publConst.lblMainComposition.getText());
     lblRightPane.setText(publConst.lblRightComposition.getText());
     }
-    public void butCompositionMosExt() {
-    lblMain.setText(lblMainDefDesc);
-    lblRightPane.setText(lblRightPaneDefDesc);
-    }
-    //--------------------butEncapsulation button 'onMouseEntered' method-----------------------
     @FXML
-    public void butEncapsulationMosEtr() {
-    lblMain.setText(publConst.lblMainEncapsulation.getText());
-    lblRightPane.setText(publConst.lblRightEncapsulation.getText());
-    }
-    public void butEncapsulationMosExt() {
+    public void butCompositionMosExt() {
     lblMain.setText(lblMainDefDesc);
     lblRightPane.setText(lblRightPaneDefDesc);
     }

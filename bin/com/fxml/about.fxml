@@ -37,8 +37,8 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="42.0" layoutY="344.0" prefHeight="36.0" prefWidth="920.0" text="For more technical details be sure to read information in the right pane of main application scrren." wrapText="true" />
-            <Label layoutX="41.0" layoutY="248.0" prefHeight="106.0" prefWidth="908.0" text="Application has been developed with Eclipse Java EE IDE Oxygen v. 4.7, uses Java 8, JavaFX, including FXML, CSS, Controlers classes. For the most part it has been developed based on Model View Controller architectural pattern. From a MVC perspective, the FXML file describes user interface is the view. The controller is a Java class is declared as the controller for the view. The model consists of classes, interface, object on the Java side, that handles the application background logic and connects to the view through the controller." textAlignment="JUSTIFY" wrapText="true" />
+            <Label layoutX="42.0" layoutY="354.0" prefHeight="55.0" prefWidth="920.0" text="Project has been created in accordance with the best practises and clean code rules. For more technical details be sure to read information in the right pane of main application scrren." wrapText="true" />
+            <Label layoutX="41.0" layoutY="248.0" prefHeight="106.0" prefWidth="908.0" text="Application has been developed with Eclipse Java EE IDE Oxygen v. 4.7, uses Java 8, JavaFX, including FXML, CSS, Controlers classes. For the most part it has been developed based on Model View Controller architectural pattern. From a MVC perspective, the FXML file describes user interface is the view. Dedicated Java class is declared as the controller for the view. The model consists of controler classes, user interface and code, that handles the application background logic and connects to the view through the controller." textAlignment="JUSTIFY" wrapText="true" />
             <Label layoutX="42.0" layoutY="435.0" text="In case of any questions do not hesitate to contact me at t.gomoradzki@gmail.com" />
       </children>
          <effect>

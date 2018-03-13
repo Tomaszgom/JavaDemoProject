@@ -26,11 +26,7 @@ public enum publConst {
 //-----Main Label: About Description
 				lblMainComposition(getTextDesc("lblMainComposition")),
 //-----Right Pane Label: About
-				lblRightComposition(getTextDesc("lblRightComposition")),				
-//-----Main Label: About Description
-				lblMainEncapsulation(getTextDesc("lblMainEncapsulation")),
-//-----Right Pane Label: About
-				lblRightEncapsulation(getTextDesc("lblRightEncapsulation")),				
+				lblRightComposition(getTextDesc("lblRightComposition")),								
 //-----Main Label: About Description
 				lblMainHashMapGame(getTextDesc("lblMainHashMapGame")),
 //-----Right Pane Label: About
