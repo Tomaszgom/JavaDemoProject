@@ -378,6 +378,18 @@ public class ContrDemoMain {
     	System.exit(0);
     }
     
+  
+    public void ActMenuThreads() {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/threadsMain.fxml"));	
+			Scene scene = new Scene(root,682.0,416.0);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+    }
     
  /////////////////////////////////////////////////////////////////////
     

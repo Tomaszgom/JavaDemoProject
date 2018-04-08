@@ -8,24 +8,26 @@ import javax.swing.JOptionPane;
 public class Input {
 	
     public static void main(String[] args) throws IOException {
-    	ReadFromPlain();
+    	System.out.println(ReadFromPlain());
     	//ReadFromFormatted();
     }
 	
 	public static String ReadFromPlain() throws IOException{
 		
-		String input = "";
+		String input = "", output = "";
 		 //------  Read from plain text project local file with Buffer Reader    
 	     try (BufferedReader dirFile = new BufferedReader(new FileReader("./src/main/resources/com/txt/inOutput_plain.txt"))) {   	  	
 	    		
 	            while((input = dirFile.readLine()) != null) {  	            		            	
-	              System.out.println("File content: "+input);	              
+	              //
+	            	System.out.println("File content: "+input);	
+	            	output = output + input;
 	            }
 	     } catch (IOException e) {
 	        	e.printStackTrace();
 	        	 JOptionPane.showMessageDialog(null, "IOException: " + e.getMessage(),"Error", JOptionPane.ERROR_MESSAGE);
 	       }
-	     return "File content: "+input;
+	     return "File content: "+output;
 	}
     
     public static String ReadFromFormatted() throws IOException {

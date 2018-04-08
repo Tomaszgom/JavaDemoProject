@@ -1,1 +1,1 @@
-Factory Pattern
+Decorator Pattern

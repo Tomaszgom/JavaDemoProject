@@ -26,22 +26,13 @@
       <menus>
         <Menu mnemonicParsing="false" text="Go to">
           <items>
-            <MenuItem mnemonicParsing="false" text="New" />
-            <MenuItem mnemonicParsing="false" text="Open…" />
-            <Menu mnemonicParsing="false" text="Open Recent" />
-            <MenuItem mnemonicParsing="false" text="Close" />
-            <MenuItem mnemonicParsing="false" text="Save" />
-            <MenuItem mnemonicParsing="false" text="Save As…" />
-            <MenuItem mnemonicParsing="false" text="Revert" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Preferences…" />
-            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="MenuThreads" mnemonicParsing="false" text="Threads" onAction="#ActMenuThreads" />
             <MenuItem fx:id="MenuQuit" mnemonicParsing="false" onAction="#ActMenuQuit" text="Quit" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
           <items>
-            <MenuItem mnemonicParsing="false" text="About App" />
+            <MenuItem fx:id="MenuQuit" mnemonicParsing="false" onAction="#ActButAbout" text="About Demo Project" />
           </items>
         </Menu>
       </menus>

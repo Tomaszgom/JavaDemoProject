@@ -22,12 +22,12 @@
             <Font name="System Bold" size="18.0" />
           </font>
         </Label>
-            <Label layoutX="41.0" layoutY="58.0" prefHeight="95.0" prefWidth="668.0" text="Hi, my name is Tomasz Gomoradzki, I am the author of Java Demo Project. It is a stand-alone, self explanatory application which consist of several sub-program. Demo Project has been developed to present extensive sample of my programming skills and understanding of related concepts and should be considered as part of my portfolio." textAlignment="JUSTIFY" textFill="#111111" wrapText="true">
+            <Label layoutX="41.0" layoutY="58.0" prefHeight="95.0" prefWidth="668.0" text="Hi, my name is Tomasz Gomoradzki, I am the author of Java Demo Project. It is a stand-alone, self explanatory application which consist of several sub-programs. Demo Project has been developed to present extensive sample of my programming skills and understanding of related concepts and should be considered as part of my portfolio." textAlignment="JUSTIFY" textFill="#111111" wrapText="true">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="41.0" layoutY="153.0" prefHeight="95.0" prefWidth="668.0" text="Demo Project guides user through each section with descriptions, additional information and in some cases UML diagrams, however to get in-depth idea on how it works, it recommended to review it along side with available source code. All the modules have corresponding code embedded in application but in some cases user interface should be cinsidered as concept guideline description." textAlignment="JUSTIFY" textFill="#111111" wrapText="true">
+            <Label layoutX="41.0" layoutY="153.0" prefHeight="95.0" prefWidth="668.0" text="Demo Project guides user through each section with descriptions, additional information and in some cases UML diagrams, however to get in-depth idea on how it works, it recommended to review it along side with available source code. All the modules have corresponding code embedded in application but in some cases user interface should be considered as concept guideline description." textAlignment="JUSTIFY" textFill="#111111" wrapText="true">
                <font>
                   <Font size="15.0" />
                </font>
