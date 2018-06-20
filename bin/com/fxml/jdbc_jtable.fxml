@@ -86,7 +86,7 @@
                   <Font size="13.0" />
                </font>
             </Button>
-            <Label layoutX="157.0" layoutY="58.0" prefHeight="79.0" prefWidth="672.0" text="This module is a small client-server appication that allows to connect with Oracle Database, query, fetch, display, update, insert and delete data, all these with use of interactive JTable. It requires running Oracle database service, credentials and accessible Client table. SQL code necessary create table is available below." textAlignment="JUSTIFY" wrapText="true">
+            <Label layoutX="157.0" layoutY="58.0" prefHeight="79.0" prefWidth="672.0" text="This module is a client-server appication that allows to connect to Oracle Database, query, display, update, insert and delete data, all these with use of interactive JTable. It requires running Oracle database service, credentials and accessible CLIENT table. The SQL code needed to create the table containing the data is available below by clicking button." textAlignment="JUSTIFY" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font></Label>

@@ -34,12 +34,6 @@ public class Main extends Application {
 			
 			
 			
-			
-			
-			
-			
-			
-			
 	//---------------DemoMain--------------------		
 /*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/DemoMain.fxml"));
 			Scene scene = new Scene(root,1331.0,742.0);
