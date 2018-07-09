@@ -73,7 +73,7 @@ public class Task implements Comparable<Task>{
 			return 0;
 		}
 		if(tsk != null) {
-			//negative val for this StartDate before tsk Start Date 
+			//negative val for this StartDate before task Start Date 
 			return (int)Duration.between(tsk.tTimeStart.atTime(0, 0), this.tTimeStart.atTime(0, 0)).toDays();
 		}
 		throw new NullPointerException();
