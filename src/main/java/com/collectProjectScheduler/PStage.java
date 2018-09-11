@@ -11,7 +11,8 @@ public class PStage{
 	private String stageName;
 	private ArrayList<TaskPrt> PStageTasks;
 	
-//--------Constructor
+		//	Constructor
+	
 	public PStage(String stgName){ 
 		PStageTasks = new ArrayList<TaskPrt>();//Initialising, Stage Task List
 		stageName = stgName;
@@ -22,7 +23,8 @@ public class PStage{
         return stageName;
     } 
 	
-//-------Getters	
+    	//	Getters
+    
 	public ArrayList<TaskPrt> getPStageTasks(){
 		return PStageTasks;
 	}
@@ -33,10 +35,11 @@ public class PStage{
 	
 	public void addTaskToPStage(TaskPrt tsk){
 		PStageTasks.add(tsk);
-		//JOptionPane.showMessageDialog(null, "Task "+tsk.getTaskName()+" has been added to stage "+GetStageName()+".");
+		// JOptionPane.showMessageDialog(null, "Task "+tsk.getTaskName()+" has been added to stage "+GetStageName()+".");
 	}
 	
-//------------print Tasks	
+		//  Print Tasks	
+	
 	public String GetPrintPStageTasks(){
 			StringBuilder out = new StringBuilder();		
 		for (Task tsk : getPStageTasks()) {		
@@ -47,7 +50,8 @@ public class PStage{
 			return out.toString();
 	}
 
-	// --- Comparator for sorting
+		// Comparator for sorting
+	
 	Comparator<TaskPrt> comparator = new Comparator<TaskPrt>() {
 		@Override
 		public int compare(TaskPrt tsk1, TaskPrt tsk2) {
@@ -55,7 +59,7 @@ public class PStage{
 		}
 	};
 	
-	//-----------Sort Activities by Time Methods
+		//	Sort Activities by Time Methods
 	
 	public void SortTasksByStartDate(){
 		Collections.sort(getPStageTasks(), comparator);	
@@ -74,7 +78,7 @@ public class PStage{
 				return out.toString();
 	}
 	
-	//-----get Process Start, Stop and Nubmer of days
+		//	Get Process Start, Stop and Nubmer of days
 	
 	public LocalDate getStartDateOfStage(){
 		LocalDate frStartDate = null, lstStartDate = null;		
@@ -100,9 +104,10 @@ public class PStage{
 		return Duration.between(this.getStartDateOfStage().atTime(0, 0), this.getEndDateOfStage().atTime(0, 0)).toDays();
 	}
 	
-	//-----------Calculate Activity Time Statistics
+	// ** Calculate Activity Time Statistics ** //
 	
-	//---------- Get the Time of shortest task in Stage
+		//Get the Time of shortest task in Stage
+	
 	public long getTasksMinTime() {
 		long days, minDays = 0;	
 		for (Task tsk : getPStageTasks()) {	
@@ -135,7 +140,7 @@ public class PStage{
 	}
 		
 }	
-	//-------------------Selection Sort
+		//	Selection Sort
 /*	public Task[] getArrayOfActivitiesSortedByTimeSelSort() { 
 		Task[] TmpActArr = new Task[numOfElInArray];
 		System.arraycopy( getActivityArray(), 0, TmpActArr, 0, getActivityArray().length );

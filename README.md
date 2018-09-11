@@ -1,9 +1,8 @@
 # Java Demo Project by Tomasz Gomoradzki
 
-Java Demo Project is stand alone, self explanatory desktop application that should be considered as programming portfolio.
-It consist of several projects, all gathered and shared on GitHub within one application to present extensive sample of my programming skills.
+Java Demo Project is stand alone, self explanatory desktop application. It consist of several functionally separate sub-projects, including Project Scheduler, 2D video game, Threads presentation and more. All deployed within one consistent user interface, designed especially to present extensive sample of my programming skills. App guides user through each module with comprehensive descriptions, explaining the use and implemented concepts.
 
-Feel invied to watch project video presentation available at YouTube: https://www.youtube.com/user/gosston/videos
+Application gives good idea of my base skills and familiarity of crucial java programming concepts in compact way.
 
 To launch the Demo project go to src/main/java/com/start and run Main class.
 
@@ -25,4 +24,4 @@ Moreover some of the technologies and concepts used are:
 - Threads. using Java Concurrency, implementation of 'Runnable' interface, inheritance of 'Task' observable class
 - JFrame, libraries: java.awt.Graphics2D, awt.Polygon, util.concurren, including concurrent.ScheduledThreadPoolExecutor.
 
-More details on the technologies and concept used are available within the application itself in form of explanatory information displayed on interface screens (appropriate modules of user interface).
+More details on the technologies and concept used are available within the application itself in form of explanatory information displayed on user interface screens (appropriate modules of user interface).
