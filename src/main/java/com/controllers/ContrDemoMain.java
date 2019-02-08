@@ -32,21 +32,17 @@ public class ContrDemoMain {
     @FXML private ProgressBar progressBar;
     private Task<Void> task;
   
-   public final String lblMainDefDesc = publConst.lblMainDefDescP1.getText()
-		   + publConst.ProjName.getText()
-		   + publConst.LblMainDefDescP2.getText();
+   public final String lblMainDefDesc = publConst.lblMainDefDescP1.getText();
    public final String lblRightPaneDefDesc = publConst.lblRightDefDesc.getText();
    
    
     @FXML
-    public void initialize() {   
-        System.out.println("Demo Main Initialize... ");      
+    public void initialize() {         
         lblMain.setText(lblMainDefDesc);
         lblRightPane.setText(lblRightPaneDefDesc);
-        //System.out.println(publConst.lblMainDefDescP1.getText());
         
         
-		// Track the mouse if it is inside of the panel		
+	// Track the mouse if it is inside of the panel		
 		ListenForMouse lForMouse = new ListenForMouse();
 		//About.setOnMouseEntered(value);
 				
@@ -86,7 +82,7 @@ public class ContrDemoMain {
           
     } */   
     
-  //--------------------About button clicked-----------------------
+  //   About button clicked   
     @FXML
     public void ActButAbout(ActionEvent ev) {
     	//System.out.println("About button clicked");
@@ -179,10 +175,11 @@ public class ContrDemoMain {
 			e.printStackTrace();
 		}
     }
+    
     @FXML
-    public void ActButDesignPatterns_Factory(ActionEvent ev) {
+    public void ActButDesignPatterns(ActionEvent ev) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/designPatterns_Factory.fxml"));	
+			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/designPatterns.fxml"));	
 			Scene scene = new Scene(root,1003.0,629.0);
 			Stage stage = new Stage();
 			stage.setScene(scene);
@@ -191,30 +188,7 @@ public class ContrDemoMain {
 			e.printStackTrace();
 		}
     }
-    @FXML
-    public void ActButDesignPatterns_Observer(ActionEvent ev) {
-		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/about.fxml"));	
-			Scene scene = new Scene(root, 1003.0, 629.0);
-			Stage stage = new Stage();
-			stage.setScene(scene);
-			stage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-    }
-    @FXML
-    public void ActButDesignPatterns_Strategy(ActionEvent ev) {
-		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/designPatterns_Strategy.fxml"));	
-			Scene scene = new Scene(root,1003.0,629.0);
-			Stage stage = new Stage();
-			stage.setScene(scene);
-			stage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-    }
+    
     @FXML
     public void ActButVideoGame2D(ActionEvent ev) {
 		try {
@@ -227,36 +201,14 @@ public class ContrDemoMain {
 			e.printStackTrace();
 		}
     }
-    @FXML
-    public void ActButDesignPatterns_Adapter(ActionEvent ev) {
-		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/about.fxml"));	
-			Scene scene = new Scene(root, 1003.0, 629.0);
-			Stage stage = new Stage();
-			stage.setScene(scene);
-			stage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-    }
-    @FXML
-    public void ActButDesignPatterns_Decorator(ActionEvent ev) {
-		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/about.fxml"));	
-			Scene scene = new Scene(root, 1003.0, 629.0);
-			Stage stage = new Stage();
-			stage.setScene(scene);
-			stage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-    }
+
+
     
     
     
     
     
-  //--------------------About button 'onMouseEntered' method-----------------------
+  //   About button 'onMouseEntered' method   
     @FXML
     public void butAboutMosEtr() {
     lblMain.setText(publConst.lblMainAbout.getText());
@@ -267,7 +219,7 @@ public class ContrDemoMain {
     lblMain.setText(lblMainDefDesc);
     lblRightPane.setText(lblRightPaneDefDesc);
     }
-   //--------------------Composition button 'onMouseEntered' method-----------------------
+   //   Composition button 'onMouseEntered' method   
     @FXML
     public void butCompositionMosEtr() {
     lblMain.setText(publConst.lblMainComposition.getText());
@@ -278,7 +230,7 @@ public class ContrDemoMain {
     lblMain.setText(lblMainDefDesc);
     lblRightPane.setText(lblRightPaneDefDesc);
     }
-    //--------------------butHashMapGame button 'onMouseEntered' method-----------------------
+    //   butHashMapGame button 'onMouseEntered' method   
     @FXML
     public void butHashMapGameMosEtr() {
     lblMain.setText(publConst.lblMainHashMapGame.getText());
@@ -288,7 +240,7 @@ public class ContrDemoMain {
     lblMain.setText(lblMainDefDesc);
     lblRightPane.setText(lblRightPaneDefDesc);
     }
-    //--------------------butJdbc_jtable button 'onMouseEntered' method-----------------------
+    //   butJdbc_jtable button 'onMouseEntered' method   
     @FXML
     public void butJdbc_jtableMosEtr() {
     lblMain.setText(publConst.lblMainJdbc_jtable.getText());
@@ -298,7 +250,7 @@ public class ContrDemoMain {
     lblMain.setText(lblMainDefDesc);
     lblRightPane.setText(lblRightPaneDefDesc);
     }
-    //--------------------butProjectScheduler button 'onMouseEntered' method-----------------------
+    //   butProjectScheduler button 'onMouseEntered' method   
     @FXML
     public void butProjectSchedulerMosEtr() {
     lblMain.setText(publConst.lblMainProjectScheduler.getText());
@@ -308,7 +260,7 @@ public class ContrDemoMain {
     lblMain.setText(lblMainDefDesc);
     lblRightPane.setText(lblRightPaneDefDesc);
     }
-    //--------------------butThreads button 'onMouseEntered' method-----------------------
+    //	butThreads button 'onMouseEntered' method
     @FXML
     public void butThreadsMosEtr() {
     lblMain.setText(publConst.lblMainThreads.getText());
@@ -318,7 +270,7 @@ public class ContrDemoMain {
     lblMain.setText(lblMainDefDesc);
     lblRightPane.setText(lblRightPaneDefDesc);
     }
-    //--------------------butInOutPut button 'onMouseEntered' method-----------------------
+    //	butInOutPut button 'onMouseEntered' method
     @FXML
     public void butInOutPutMosEtr() {
     lblMain.setText(publConst.lblMainInOutPut.getText());
@@ -328,37 +280,18 @@ public class ContrDemoMain {
     lblMain.setText(lblMainDefDesc);
     lblRightPane.setText(lblRightPaneDefDesc);
     }
-    //--------------------butDesignPatterns_Factory button 'onMouseEntered' method-----------------------
+    
+    //  butDesignPatterns button 'onMouseEntered' method 
     @FXML
-    public void butDesignPatterns_FactoryMosEtr() {
-    lblMain.setText(publConst.lblMainDesignPatterns_Factory.getText());
-    lblRightPane.setText(publConst.lblRightDesignPatterns_Factory.getText());
+    public void butDesignPatterns_MosEtr() {
+    lblMain.setText(publConst.lblMainDesignPatterns.getText());
+    lblRightPane.setText(publConst.lblRightDesignPatterns.getText());
     }
-    public void butDesignPatterns_FactoryMosExt() {
+    public void butDesignPatterns_MosExt() {
     lblMain.setText(lblMainDefDesc);
     lblRightPane.setText(lblRightPaneDefDesc);
     }
-    //--------------------butDesignPatterns_Observer button 'onMouseEntered' method-----------------------
-    @FXML
-    public void butDesignPatterns_ObserverMosEtr() {
-    lblMain.setText(publConst.lblMainDesignPatterns_Observer.getText());
-    lblRightPane.setText(publConst.lblRightDesignPatterns_Observer.getText());
-    }
-    public void butDesignPatterns_ObserverMosExt() {
-    lblMain.setText(lblMainDefDesc);
-    lblRightPane.setText(lblRightPaneDefDesc);
-    }
-    //--------------------butDesignPatterns_Strategy button 'onMouseEntered' method-----------------------
-    @FXML
-    public void butDesignPatterns_StrategyMosEtr() {
-    lblMain.setText(publConst.lblMainDesignPatterns_Strategy.getText());
-    lblRightPane.setText(publConst.lblRightDesignPatterns_Strategy.getText());
-    }
-    public void butDesignPatterns_StrategyMosExt() {
-    lblMain.setText(lblMainDefDesc);
-    lblRightPane.setText(lblRightPaneDefDesc);
-    }
-    //--------------------butVideoGame2D button 'onMouseEntered' method-----------------------
+    //  butVideoGame2D button 'onMouseEntered' method
     @FXML
     public void butVideoGame2DMosEtr() {
     lblMain.setText(publConst.lblMainVideoGame2D.getText());
@@ -372,8 +305,9 @@ public class ContrDemoMain {
     
     
     
-/////////////////////////////////////////////////////////////////////   
-    //--------------------Menu Items Actions------------
+   /**********************************************************************************/  
+      //  Menu Items Actions
+    
     public void ActMenuQuit() {
     	System.exit(0);
     }
@@ -391,7 +325,7 @@ public class ContrDemoMain {
 		}
     }
     
- /////////////////////////////////////////////////////////////////////
+ /**********************************************************************************/
     
     @FXML
 	public void mouseEntered(MouseEvent arg0) {

@@ -20,7 +20,7 @@ public class MrRed extends Task<Void> {
 			Thread.sleep(1400);
 			updateMessage("Hi, my name is Mr Red.");
 			Thread.sleep(3000);
-			updateMessage("I will interrupt Mr Blue. Hope he will not be mad.");
+			updateMessage("I will interrupt Mr Gold. Hope he will not be mad.");
 			Thread.sleep(4000);						
 			ContrThreadsMrGold.getThreadMrGold().interrupt();
 			

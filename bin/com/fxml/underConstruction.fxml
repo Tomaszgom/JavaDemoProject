@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="358.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="432.0" prefWidth="679.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="160.0" layoutY="107.0" prefHeight="111.0" prefWidth="582.0" style="&#10;" text="Under construction. Sorry :)" textAlignment="CENTER" textFill="#111111" wrapText="true">
+          <font>
+            <Font name="System Bold" size="38.0" />
+          </font>
+        </Label>
+      </children>
+         <effect>
+            <ColorAdjust />
+         </effect>
+    </AnchorPane>
+  </children>
+</VBox>

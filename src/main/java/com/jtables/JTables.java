@@ -30,10 +30,11 @@ package com.jtables;
 		static Object[] columns = {"Client ID", "First Name", "Last Name", "City", "Points", "Last Login Date"};		
 			// Holds row values for the table		
 		static Object[][] databaseResults;
-				
+		static int getLastID = 0;	
 			// DefaultTableModel defines the methods JTable will use (overriding the getColumnClass method)		
 	    static DefaultTableModel dTableModel = new DefaultTableModel(databaseResults, columns){
-	        public Class getColumnClass(int column) {
+	        
+	    	public Class getColumnClass(int column) {
 	            Class returnValue;
 	            
 	            	// check if column exists
@@ -101,14 +102,9 @@ package com.jtables;
 	            while(rows.next()){
 	            	
 	            	tempRow = new Object[]{rows.getInt(1), rows.getString(2), rows.getString(3), rows.getString(4), rows.getInt(5), rows.getDate(6)};	            		            	
-	            	/* You can also get other types
-	            	 * int getInt()
-	            	 * boolean getBoolean()
-	            	 * double getDouble()
-	            	 * float getFloat()
-	            	 * long getLong()
-	            	 * short getShort()
-	            	 */
+	            	if (rows.getInt(1) > getLastID) {
+	            		getLastID = rows.getInt(1);	            		
+	            	}
 	            	
 	            	// Add the row of data to the JTable	            	
 	            	dTableModel.addRow(tempRow);
@@ -161,8 +157,9 @@ package com.jtables;
 		    			// Moves the database to the row where data will be placed
 						rows.moveToInsertRow();
 						
-						// Update the values in the database		
-						rows.updateInt("CLIENT_ID", 150);
+						// Update the values in the database
+						getLastID+=1;
+						rows.updateInt("CLIENT_ID", getLastID);
 						rows.updateString("FIRST_NAME", sFirstName);
 						rows.updateString("LAST_NAME", sLastName);
 						rows.updateString("CITY", sCity);
@@ -185,13 +182,13 @@ package com.jtables;
 		    			// Go to the last row of ResultSet, in this case the one which we just inserted and get the id
 		    			
 						rows.last();
-						intClientID = rows.getInt(1);
+						intClientID = rows.getInt(1)+1;
 					} catch (SQLException e1) {						
 						e1.printStackTrace();
 					}
 		    		
 		    		Object[] client = {intClientID, sFirstName, sLastName, sCity, sPoints, sqlLastLoginDate};
-		    		
+		    		System.out.println("TGintClientID:   "+intClientID);
 		    			// Add the row of values to the JTable		    		
 		    		dTableModel.addRow(client);		    		
 		    	}		    	
@@ -319,7 +316,7 @@ package com.jtables;
 			
 		}
 		
-				//Format String to  date		
+				//  Format String to  date		
 		public static java.util.Date getADate(String sDate){			
 			SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd");
 			

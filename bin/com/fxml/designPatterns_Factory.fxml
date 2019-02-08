@@ -13,52 +13,67 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="432.0" prefWidth="679.0" VBox.vgrow="ALWAYS">
       <children>
-        <Label alignment="CENTER" layoutX="349.0" layoutY="7.0" prefHeight="36.0" prefWidth="269.0" style="&#10;" text="Design Pattern Factory" textAlignment="CENTER" textFill="#111111" wrapText="true">
+        <Label alignment="CENTER" layoutX="349.0" layoutY="14.0" prefHeight="36.0" prefWidth="269.0" style="&#10;" text="Design Pattern Factory" textAlignment="CENTER" textFill="#111111" wrapText="true">
           <font>
             <Font name="System Bold" size="18.0" />
           </font>
         </Label>
-            <Label layoutX="32.0" layoutY="43.0" prefHeight="67.0" prefWidth="940.0" text="Factory Pattern is used in cases there is a need for the method to return one of the classes, defined beforehand, that extent the same super class. Typically this is situation when we do not want to decide before run time about the exact classes to be returned and to be used, also to control the selection of classes creation and to encapsulate creation of objects." textAlignment="JUSTIFY" textFill="#111111" wrapText="true">
+            <Label layoutX="32.0" layoutY="44.0" prefHeight="108.0" prefWidth="940.0" text="Factory Pattern is used in cases there is a need for the method to return one of the classes, defined beforehand, that extent the same super class. Typically this is situation when we do not want to decide before run time about the exact classes to be returned and to be used, also to control the selection of classes creation and to encapsulate creation of objects." textAlignment="JUSTIFY" textFill="#111111" wrapText="true">
                <font>
-                  <Font size="14.0" />
+                  <Font size="17.0" />
                </font>
             </Label>
-            <Button fx:id="launchProduction" layoutX="551.0" layoutY="230.0" mnemonicParsing="false" onAction="#onActLaunchProduction" prefHeight="36.0" prefWidth="204.0" text="Launch Production" />
-            <Label layoutX="32.0" layoutY="110.0" prefHeight="67.0" prefWidth="940.0" text="In this example once factory conveyor belt, that represent application in progress, is launched,  program returns classes that are represented by laptop type: Gaming, Office and All purpose. While conveyor belt 'is moving', so at run time, user decides what new laptop to produce. Based on that program creates corresponding objects that share laptop abstract super class." textAlignment="JUSTIFY" wrapText="true">
+            <Button fx:id="launchProduction" layoutX="532.0" layoutY="279.0" mnemonicParsing="false" onAction="#onActLaunchProduction" prefHeight="36.0" prefWidth="204.0" text="Launch Production">
                <font>
-                  <Font size="14.0" />
+                  <Font size="16.0" />
+               </font></Button>
+            <Label layoutX="33.0" layoutY="141.0" prefHeight="87.0" prefWidth="940.0" text="In this example once factory conveyor belt, that represent application in progress, is launched,  program returns classes that are represented by laptop type: Gaming, Office and All purpose. While conveyor belt 'is moving', so at run time, user decides what new laptop to produce. Based on that program creates corresponding objects that share laptop abstract super class." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="17.0" />
                </font>
             </Label>
-            <Label layoutX="32.0" layoutY="188.0" text="It is advised to review this module along side with source code.">
+            <Label layoutX="32.0" layoutY="235.0" text="It is advised to review this module along side with source code.">
                <font>
-                  <Font size="14.0" />
+                  <Font size="17.0" />
                </font>
             </Label>
-            <Button fx:id="showUML" layoutX="196.0" layoutY="230.0" mnemonicParsing="false" onAction="#onActShowUML" prefHeight="36.0" prefWidth="216.0" text="Show UML Diagrm" />
-            <ImageView fx:id="imgConveyorBelt" fitHeight="289.0" fitWidth="308.0" layoutX="333.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+            <Button fx:id="showUML" layoutX="205.0" layoutY="279.0" mnemonicParsing="false" onAction="#onActShowUML" prefHeight="36.0" prefWidth="216.0" text="Show UML Diagrm">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <ImageView fx:id="imgConveyorBelt" fitHeight="251.0" fitWidth="279.0" layoutX="357.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../jpg/conveyorBelt.jpg" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgAllPurposeLaptop" fitHeight="150.0" fitWidth="200.0" layoutX="402.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgAllPurposeLaptop" fitHeight="150.0" fitWidth="200.0" layoutX="402.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../jpg/laptopAllPurpose.jpg" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgGamingLaptop" fitHeight="150.0" fitWidth="200.0" layoutX="402.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgGamingLaptop" fitHeight="150.0" fitWidth="200.0" layoutX="402.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../jpg/laptopGaming.jpg" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgOfficeLaptop" fitHeight="130.0" fitWidth="181.0" layoutX="412.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgOfficeLaptop" fitHeight="130.0" fitWidth="181.0" layoutX="412.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../jpg/laptopOffice.jpg" />
                </image>
             </ImageView>
-            <Button fx:id="produceAllPurposeLaptop" layoutX="77.0" layoutY="328.0" mnemonicParsing="false" onAction="#onActProduceAllPurposeLaptop" prefHeight="43.0" prefWidth="204.0" text="Produce All Purpose Laptop" />
-            <Button fx:id="produceGamingLaptop" layoutX="77.0" layoutY="393.0" mnemonicParsing="false" onAction="#onActProduceGamingLaptop" prefHeight="43.0" prefWidth="204.0" text="Produce Gaming Laptop" />
-            <Button fx:id="produceOfficeLaptop" layoutX="77.0" layoutY="460.0" mnemonicParsing="false" onAction="#onActProduceOfficeLaptop" prefHeight="43.0" prefWidth="204.0" text="Produce Office Laptop" />
-            <Label fx:id="lblInfo" layoutX="682.0" layoutY="328.0" prefHeight="175.0" prefWidth="246.0" text="Info" textAlignment="CENTER" wrapText="true">
+            <Button fx:id="produceAllPurposeLaptop" layoutX="77.0" layoutY="344.0" mnemonicParsing="false" onAction="#onActProduceAllPurposeLaptop" prefHeight="43.0" prefWidth="204.0" text="Produce All Purpose Laptop">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button fx:id="produceGamingLaptop" layoutX="77.0" layoutY="409.0" mnemonicParsing="false" onAction="#onActProduceGamingLaptop" prefHeight="43.0" prefWidth="204.0" text="Produce Gaming Laptop">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button fx:id="produceOfficeLaptop" layoutX="77.0" layoutY="476.0" mnemonicParsing="false" onAction="#onActProduceOfficeLaptop" prefHeight="43.0" prefWidth="204.0" text="Produce Office Laptop">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Label fx:id="lblInfo" layoutX="682.0" layoutY="344.0" prefHeight="175.0" prefWidth="246.0" text="Info" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>

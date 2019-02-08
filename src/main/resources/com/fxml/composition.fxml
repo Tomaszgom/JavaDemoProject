@@ -48,8 +48,14 @@
                   <Font size="12.0" />
                </font></TextField>
             <Button fx:id="butPimpMyRide" layoutX="798.0" layoutY="574.0" mnemonicParsing="false" onAction="#ActbutPimpMyRide" prefHeight="31.0" prefWidth="149.0" text="Pimp my ride" />
-            <Label layoutX="52.0" layoutY="50.0" prefHeight="54.0" prefWidth="894.0" text="Composition defines relation between classes as 'HAS A', so super class HAS A sub-class. In case of Inheritance which is more typical, the relation is defined as 'IS A'. Sub-Class IS A Super-Class." wrapText="true" />
-            <Label layoutX="44.0" layoutY="192.0" prefHeight="94.0" prefWidth="901.0" text="In this concept Demo example Car is super class and is composed of subclasses, one engine and 4 wheels. Car has an engine. Car has wheels. Car class is created out of engine and 4 wheels. Whenever we need to check oil level or any other part of the car, we will first call car in which we have the engine. Engine has method that allows to check the oil level. It is advised to review this module along side with source code." wrapText="true" />
+            <Label layoutX="19.0" layoutY="50.0" prefHeight="141.0" prefWidth="950.0" text="Composition defines relation between classes as 'HAS A', so super class HAS A sub-class. In case of Inheritance which is more typical, the relation is defined as 'IS A'. Sub-Class IS A Super-Class. Encapsulation allows to restrict external manipulation and access in general  to certain components in the object, allows to protect members of the class from external access in order to guard against unauthorized access. Changes within class will not affect external code. Constructor guaranties that all necessary variables are set once object is created." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label layoutX="19.0" layoutY="190.0" prefHeight="113.0" prefWidth="950.0" text="In this concept Demo example Car is super class and is composed of subclasses, one engine and 4 wheels. Car has an engine. Car has wheels. Car class is created out of engine and 4 wheels. Whenever we need to check oil level or any other part of the car, we will first call car in which we have the engine. Engine has method that allows to check the oil level. It is advised to review this module along side with source code." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
             <TextArea fx:id="txtArOutput" editable="false" layoutX="623.0" layoutY="314.0" prefHeight="223.0" prefWidth="324.0" />
             <TextField editable="false" layoutX="177.0" layoutY="416.0" prefHeight="36.0" prefWidth="135.0" text="Engine power: 605 HP">
                <font>
@@ -61,7 +67,6 @@
                   <Font size="12.0" />
                </font>
             </TextField>
-            <Label layoutX="44.0" layoutY="104.0" prefHeight="82.0" prefWidth="901.0" text="Encapsulation allows to restrict external manipulation and access in general  to certain components in the object, allows to protect members of the class from external access in order to guard against unauthorized access. Changes within class will not affect external code. Constructor guaranties that all necessary variables are set once object is created." wrapText="true" />
       </children>
          <effect>
             <ColorAdjust />

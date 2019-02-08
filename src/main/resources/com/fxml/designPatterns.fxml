@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="513.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ContrDesignPatterns">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="566.0" prefWidth="937.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="338.0" layoutY="14.0" prefHeight="36.0" prefWidth="269.0" style="&#10;" text="Design Patterns" textAlignment="CENTER" textFill="#111111" wrapText="true">
+          <font>
+            <Font name="System Bold" size="24.0" />
+          </font>
+        </Label>
+            <Label layoutX="67.0" layoutY="53.0" prefHeight="67.0" prefWidth="798.0" text="This section presents examples of Design Patterns implementations. It is recommended to review source code as well." textAlignment="JUSTIFY" textFill="#111111" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="butShowFactory" layoutX="221.0" layoutY="157.0" mnemonicParsing="false" onAction="#ActButDesignPatterns_Factory" prefHeight="54.0" prefWidth="216.0" text="Factory">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="butShowObserver" layoutX="510.0" layoutY="157.0" mnemonicParsing="false" onAction="#ActButDesignPatterns_Observer" prefHeight="54.0" prefWidth="216.0" text="Observer">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="butShowStrategy" layoutX="221.0" layoutY="255.0" mnemonicParsing="false" onAction="#ActButDesignPatterns_Strategy" prefHeight="54.0" prefWidth="216.0" text="Strategy">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="butShowAdapter" layoutX="510.0" layoutY="255.0" mnemonicParsing="false" onAction="#ActButDesignPatterns_Adapter" prefHeight="54.0" prefWidth="216.0" text="Adapter">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="butShowDecorator" layoutX="369.0" layoutY="358.0" mnemonicParsing="false" onAction="#ActButDesignPatterns_Decorator" prefHeight="54.0" prefWidth="216.0" text="Decorator">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+      </children>
+         <effect>
+            <ColorAdjust />
+         </effect>
+    </AnchorPane>
+  </children>
+</VBox>

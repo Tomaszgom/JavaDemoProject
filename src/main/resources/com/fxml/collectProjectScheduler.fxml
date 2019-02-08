@@ -15,9 +15,9 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="666.0" prefWidth="1025.0" VBox.vgrow="ALWAYS">
       <children>
-        <Label alignment="CENTER" layoutX="426.0" layoutY="7.0" prefHeight="36.0" prefWidth="269.0" style="&#10;" text="Project Scheduler" textAlignment="CENTER" textFill="#111111" wrapText="true">
+        <Label alignment="CENTER" layoutX="425.0" layoutY="21.0" prefHeight="30.0" prefWidth="269.0" style="&#10;" text="Project Scheduler" textAlignment="CENTER" textFill="#111111" wrapText="true">
           <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="22.0" />
           </font>
         </Label>
             <TextField fx:id="txtfTaskName" layoutX="199.0" layoutY="203.0" prefHeight="25.0" prefWidth="445.0" text="Task_1">
@@ -25,62 +25,46 @@
                   <Font size="14.0" />
                </font>
             </TextField>
-            <Label layoutX="108.0" layoutY="208.0" text="Task Name">
+            <Label layoutX="92.0" layoutY="207.0" text="Task Name">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="16.0" />
                </font></Label>
-            <Label layoutX="112.0" layoutY="256.0" text="Start date">
+            <Label layoutX="96.0" layoutY="255.0" text="Start date">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="16.0" />
                </font></Label>
-            <Label layoutX="422.0" layoutY="256.0" text="End date">
+            <Label layoutX="405.0" layoutY="255.0" text="End date">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="16.0" />
                </font></Label>
-            <Label layoutX="112.0" layoutY="301.0" text="Priotiry">
+            <Label layoutX="96.0" layoutY="299.0" text="Priotiry">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="16.0" />
                </font></Label>
             <TextField fx:id="txtfStageName" layoutX="199.0" layoutY="152.0" prefHeight="25.0" prefWidth="445.0" text="Stage_1">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <Label layoutX="104.0" layoutY="158.0" text="Stage Name">
+            <Label layoutX="96.0" layoutY="156.0" text="Stage Name">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="16.0" />
                </font></Label>
-            <Button fx:id="butAddStage" layoutX="670.0" layoutY="153.0" mnemonicParsing="false" onAction="#OnActbutAddStage" prefHeight="30.0" prefWidth="188.0" text="Add New Stage">
+            <Button fx:id="butAddStage" layoutX="670.0" layoutY="153.0" mnemonicParsing="false" onAction="#OnActbutAddStage" prefHeight="30.0" prefWidth="188.0" text="Add New Stage" />
+            <Button fx:id="butAddTask" layoutX="670.0" layoutY="204.0" mnemonicParsing="false" onAction="#OnActbutAddTask" prefHeight="31.0" prefWidth="188.0" text="Add New Task" />
+            <Button fx:id="butShowProjectStats" layoutX="881.0" layoutY="252.0" mnemonicParsing="false" onAction="#OnActButShowProjectStats" prefHeight="31.0" prefWidth="174.0" text="Show Project Details" />
+            <Label layoutX="44.0" layoutY="44.0" prefHeight="97.0" prefWidth="1031.0" text="This program allows to plan project by adding, removing its parts, reviewing and displaying details as well as statistics. Project consists of Stages and each Stage consists of Tasks. This application module incorporates Collections, including Observable list, LinkedList, ArrayList, ojects Inheritance, java.time library, Comparable Interface implementation, Comparator, sorting and many more." wrapText="true">
                <font>
-                  <Font size="12.0" />
-               </font></Button>
-            <Button fx:id="butAddTask" layoutX="670.0" layoutY="204.0" mnemonicParsing="false" onAction="#OnActbutAddTask" prefHeight="29.0" prefWidth="188.0" text="Add New Task">
-               <font>
-                  <Font size="12.0" />
-               </font></Button>
-            <Button fx:id="butShowProjectStats" layoutX="891.0" layoutY="252.0" mnemonicParsing="false" onAction="#OnActButShowProjectStats" prefHeight="29.0" prefWidth="164.0" text="Show Project Details">
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Button>
-            <Label layoutX="66.0" layoutY="34.0" prefHeight="53.0" prefWidth="1012.0" text="This program allows to plan project process by adding, removing its parts, reviewing and displaying details, including statistics. Project consists of Stages and each Stage consists of Tasks." wrapText="true">
-               <font>
-                  <Font name="System Italic" size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="63.0" layoutY="90.0" prefHeight="43.0" prefWidth="1019.0" text="This application module incorporates Collections, including Observable list, LinkedList, ArrayList, ojects Inheritance, java.time library, Comparable Interface implementation, Comparator, sorting and many more." wrapText="true">
-               <font>
-                  <Font name="System Italic" size="13.0" />
+                  <Font size="17.0" />
                </font>
             </Label>
             <ListView fx:id="listViewStages" layoutX="37.0" layoutY="399.0" prefHeight="319.0" prefWidth="310.0" />
             <DatePicker fx:id="datePickStart" layoutX="196.0" layoutY="251.0" prefHeight="31.0" prefWidth="164.0" />
             <DatePicker fx:id="datePickEnd" layoutX="482.0" layoutY="251.0" prefHeight="17.0" prefWidth="157.0" />
-            <Label layoutX="422.0" layoutY="301.0" text="Status">
+            <Label layoutX="405.0" layoutY="297.0" prefHeight="30.0" prefWidth="57.0" text="Status">
                <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
             <ListView fx:id="listViewTasks" layoutX="373.0" layoutY="399.0" prefHeight="319.0" prefWidth="702.0" />
             <Label layoutX="142.0" layoutY="365.0" text="Project Stages">
                <font>
@@ -94,21 +78,9 @@
             </Label>
             <ComboBox fx:id="comBoxPriority" layoutX="196.0" layoutY="295.0" prefHeight="31.0" prefWidth="164.0" />               
             <ComboBox fx:id="comBoxStatus" layoutX="482.0" layoutY="295.0" prefHeight="31.0" prefWidth="157.0" />
-            <Button fx:id="butSortTasks" layoutX="670.0" layoutY="251.0" mnemonicParsing="false" onAction="#OnActButSortTasks" prefHeight="31.0" prefWidth="188.0" text="Sort Tasks by Start Date">
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Button>
-            <Button fx:id="butRemoveStage" layoutX="891.0" layoutY="153.0" mnemonicParsing="false" onAction="#OnActButRemoveStage" prefHeight="29.0" prefWidth="164.0" text="Remove Stage">
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Button>
-            <Button fx:id="butRemoveTask" layoutX="891.0" layoutY="204.0" mnemonicParsing="false" onAction="#OnActButRemoveTask" prefHeight="30.0" prefWidth="164.0" text="Remove Task">
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Button>
+            <Button fx:id="butSortTasks" layoutX="670.0" layoutY="252.0" mnemonicParsing="false" onAction="#OnActButSortTasks" prefHeight="31.0" prefWidth="188.0" text="Sort Tasks by Start Date" />
+            <Button fx:id="butRemoveStage" layoutX="881.0" layoutY="153.0" mnemonicParsing="false" onAction="#OnActButRemoveStage" prefHeight="31.0" prefWidth="174.0" text="Remove Stage" />
+            <Button fx:id="butRemoveTask" layoutX="881.0" layoutY="204.0" mnemonicParsing="false" onAction="#OnActButRemoveTask" prefHeight="31.0" prefWidth="174.0" text="Remove Task" />
 
       </children>
          <effect>

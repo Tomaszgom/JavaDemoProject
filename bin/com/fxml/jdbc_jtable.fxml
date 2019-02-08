@@ -16,88 +16,84 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="408.0" prefWidth="689.0" VBox.vgrow="ALWAYS">
       <children>
-            <ImageView fitHeight="103.0" fitWidth="145.0" layoutX="40.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="103.0" fitWidth="145.0" layoutX="14.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../jpg/database.jpg" />
                </image>
             </ImageView>
-        <Label alignment="CENTER" layoutX="290.0" layoutY="20.0" prefHeight="36.0" prefWidth="269.0" style="&#10;" text="Database Connection &amp; JTable" textAlignment="CENTER" textFill="#111111" wrapText="true">
+        <Label alignment="CENTER" layoutX="287.0" layoutY="14.0" prefHeight="36.0" prefWidth="269.0" style="&#10;" text="Database Connection &amp; JTable" textAlignment="CENTER" textFill="#111111" wrapText="true">
           <font>
             <Font name="System Bold" size="18.0" />
           </font>
         </Label>
-            <Label layoutX="94.0" layoutY="251.0" text="IP / Host Name">
+            <Label layoutX="87.0" layoutY="261.0" text="IP / Host Name">
                <font>
-                  <Font size="14.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
-            <TextField fx:id="txtfHost" layoutX="196.0" layoutY="246.0" prefHeight="25.0" prefWidth="235.0">
+            <TextField fx:id="txtfHost" layoutX="199.0" layoutY="262.0" prefHeight="25.0" prefWidth="235.0">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <Label layoutX="120.0" layoutY="333.0" text="User Name">
+            <Label layoutX="113.0" layoutY="343.0" text="User Name">
                <font>
-                  <Font size="14.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="125.0" layoutY="373.0" text="Password">
+            <Label layoutX="118.0" layoutY="383.0" text="Password">
                <font>
-                  <Font size="14.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
-            <TextField fx:id="txtfUserName" layoutX="195.0" layoutY="328.0" prefHeight="25.0" prefWidth="235.0">
+            <TextField fx:id="txtfUserName" layoutX="198.0" layoutY="344.0" prefHeight="25.0" prefWidth="235.0">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <Label layoutX="165.0" layoutY="293.0" prefHeight="16.0" prefWidth="30.0" text="Port">
+            <Label layoutX="158.0" layoutY="303.0" prefHeight="16.0" prefWidth="30.0" text="Port">
                <font>
-                  <Font size="14.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
-            <PasswordField fx:id="txtfPassword" layoutX="195.0" layoutY="368.0" prefHeight="25.0" prefWidth="235.0">
+            <PasswordField fx:id="txtfPassword" layoutX="198.0" layoutY="384.0" prefHeight="25.0" prefWidth="235.0">
                <font>
                   <Font size="14.0" />
                </font>
             </PasswordField>
-            <Label layoutX="89.0" layoutY="219.0" text="Database: Oracle">
+            <Label layoutX="81.0" layoutY="227.0" text="Database: Oracle">
                <font>
-                  <Font size="14.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="217.0" layoutY="219.0" text="API: jdbc">
+            <Label layoutX="243.0" layoutY="227.0" text="API: jdbc">
                <font>
-                  <Font size="14.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
-            <TextField fx:id="txtfPort" layoutX="196.0" layoutY="288.0" prefHeight="25.0" prefWidth="235.0">
+            <TextField fx:id="txtfPort" layoutX="199.0" layoutY="304.0" prefHeight="25.0" prefWidth="235.0">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <Label layoutX="299.0" layoutY="219.0" text="Oracle service ID: xe">
+            <Label layoutX="350.0" layoutY="227.0" text="Oracle service ID: xe">
                <font>
-                  <Font size="14.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
-            <Button fx:id="butOpenJTable" layoutX="506.0" layoutY="325.0" mnemonicParsing="false" onAction="#OnActOpenJTable" prefHeight="36.0" prefWidth="235.0" text="Open JTable and Query Database">
+            <Button fx:id="butOpenJTable" layoutX="509.0" layoutY="341.0" mnemonicParsing="false" onAction="#OnActOpenJTable" prefHeight="37.0" prefWidth="258.0" text="Open JTable and Query Database">
                <font>
-                  <Font size="13.0" />
+                  <Font size="16.0" />
                </font>
             </Button>
-            <Label layoutX="157.0" layoutY="58.0" prefHeight="79.0" prefWidth="672.0" text="This module is a client-server appication that allows to connect to Oracle Database, query, display, update, insert and delete data, all these with use of interactive JTable. It requires running Oracle database service, credentials and accessible CLIENT table. The SQL code needed to create the table containing the data is available below by clicking button." textAlignment="JUSTIFY" wrapText="true">
+            <Label layoutX="128.0" layoutY="46.0" prefHeight="163.0" prefWidth="709.0" text="This module is a client-server appication that allows to connect to Oracle Database, query, display, update, insert and delete data, all these with use of interactive JTable. It requires running Oracle database service, credentials and accessible CLIENT table. The SQL code needed to create the table containing the data is available below, can be generated by clicking appropriate  button. Technologies and libraries used: Oracle Express 11g, SQL, JTables, Swing, swing.JTextField, swing.table.DefaultTableModel, BufferedReader." textAlignment="JUSTIFY" wrapText="true">
                <font>
-                  <Font size="14.0" />
+                  <Font size="17.0" />
                </font></Label>
-            <Label layoutX="154.0" layoutY="132.0" prefHeight="54.0" prefWidth="679.0" text="Technologies and libraries used: Oracle Express 11g, SQL, JTables, Swing, swing.JTextField, swing.table.DefaultTableModel, BufferedReader" wrapText="true">
+            <TextArea fx:id="txtArOutput" layoutX="43.0" layoutY="427.0" prefHeight="113.0" prefWidth="787.0" />
+            <Button fx:id="butGetCreateTab" layoutX="509.0" layoutY="278.0" mnemonicParsing="false" onAction="#OnActGetCreateTab" prefHeight="37.0" prefWidth="258.0" text="Get Create Client Table Code">
                <font>
-                  <Font size="14.0" />
-               </font></Label>
-            <TextArea fx:id="txtArOutput" layoutX="44.0" layoutY="425.0" prefHeight="113.0" prefWidth="787.0" />
-            <Button fx:id="butGetCreateTab" layoutX="506.0" layoutY="262.0" mnemonicParsing="false" onAction="#OnActGetCreateTab" prefHeight="36.0" prefWidth="235.0" text="Get Create Client Table Code">
-               <font>
-                  <Font size="13.0" />
+                  <Font size="16.0" />
                </font>
             </Button>
       </children>

@@ -13,35 +13,34 @@
   <children>
     <AnchorPane fx:id="threadsMainAnchorPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="395.0" prefWidth="682.0" VBox.vgrow="ALWAYS">
       <children>
-            <ImageView fitHeight="76.0" fitWidth="136.0" layoutX="64.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="76.0" fitWidth="136.0" layoutX="76.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../jpg/threads.jpg" />
                </image>
             </ImageView>
-        <Label alignment="CENTER" layoutX="223.0" layoutY="45.0" prefHeight="36.0" prefWidth="269.0" style="&#10;" text="Threads Concurrency " textAlignment="CENTER" textFill="#111111" wrapText="true">
+        <Label alignment="CENTER" layoutX="220.0" layoutY="39.0" prefHeight="36.0" prefWidth="269.0" style="&#10;" text="Threads Concurrency " textAlignment="CENTER" textFill="#111111" wrapText="true">
           <font>
             <Font name="System Bold" size="18.0" />
           </font>
         </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="110.0" prefHeight="67.0" prefWidth="619.0" text="This program is designed to show usage, behaviour and interactions of Java Threads. It is designed to be a graphical presentation and beside starting pressing 'Start' button it does not require any particular usage actions." textAlignment="JUSTIFY" textFill="#111111" wrapText="true">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="98.0" prefHeight="175.0" prefWidth="619.0" text="This program is designed to show usage, behaviour and interactions of Java Threads. It is designed to be a graphical presentation and beside starting by pressing 'Start' button it does not require any particular user actions. Close all by cliking 'Reset' at the end. 'Threads' is using Java Concurrency, implementation of 'Runnable' interface, inheritance of 'Task' observable class as well as  threads sleep, join, interrupt and more." textAlignment="JUSTIFY" textFill="#111111" wrapText="true">
                <font>
-                  <Font size="15.0" />
+                  <Font size="18.0" />
                </font>
             </Label>
-            <Button fx:id="butStartThreads" layoutX="222.0" layoutY="258.0" mnemonicParsing="false" onAction="#ActStartThreads" prefHeight="67.0" prefWidth="239.0" text="Start Threads Presentation">
+            <Button fx:id="butStartThreads" layoutX="220.0" layoutY="280.0" mnemonicParsing="false" onAction="#ActStartThreads" prefHeight="67.0" prefWidth="239.0" text="Start Threads Presentation">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>
-            <Label fx:id="lblProgress" alignment="CENTER" contentDisplay="CENTER" layoutX="262.0" layoutY="338.0" prefHeight="28.0" prefWidth="158.0" text="Progress" textAlignment="CENTER">
+            <Label fx:id="lblProgress" alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="360.0" prefHeight="28.0" prefWidth="158.0" text="Progress" textAlignment="CENTER">
                <font>
                   <Font name="System Italic" size="15.0" />
                </font>
             </Label>
-            <Button fx:id="butReset" layoutX="222.0" layoutY="337.0" mnemonicParsing="false" onAction="#ActReset" prefHeight="31.0" prefWidth="239.0" text="Reset">
+            <Button fx:id="butReset" layoutX="220.0" layoutY="359.0" mnemonicParsing="false" onAction="#ActReset" prefHeight="31.0" prefWidth="239.0" text="Reset">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>
-            <Label layoutX="30.0" layoutY="177.0" prefHeight="52.0" prefWidth="627.0" text="'Threads' is using Java Concurrency, implementation of 'Runnable' interface, inheritance of 'Task' observable class as well as  threads sleep, join, interrupt and more." textAlignment="JUSTIFY" wrapText="true" />
       </children>
          <effect>
             <ColorAdjust />
