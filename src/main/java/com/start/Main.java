@@ -14,16 +14,16 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
-/*************************************************/
-/*** 			Launch Application 			   ***/
-/*************************************************/	
+/*************************************************
+ * Launch Application Class
+*************************************************/	
 
 public class Main extends Application {	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			
-			/** welcomeScreen **/
+	/** Welcome Screen Launch **/
 			
 			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/welcomeScr.fxml"));
 			Scene scene = new Scene(root,980.0,579.0);
@@ -31,21 +31,15 @@ public class Main extends Application {
 			primaryStage.setTitle(publConst.ProjName.getText());
 			primaryStage.setScene(scene);
 			primaryStage.show();
-	
-	
 			
-						
-			
-			
-			
-	/** DemoMain **/		
+					
+	/** Demo Main Launch **/		
 /*			Parent root = FXMLLoader.load(getClass().getResource("/com/fxml/DemoMain.fxml"));
 			Scene scene = new Scene(root,1331.0,742.0);
 			//scene.getStylesheets().add(getClass().getResource("/com/css/welcomeScreen.css").toExternalForm());
 			primaryStage.setTitle(publConst.ProjName.getText());
 			primaryStage.setScene(scene);
-			primaryStage.show();*/
-			
+			primaryStage.show();*/			
 												
 		} catch(Exception e) {
 			e.printStackTrace();

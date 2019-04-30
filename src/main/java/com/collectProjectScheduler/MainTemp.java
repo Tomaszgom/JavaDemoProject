@@ -8,7 +8,7 @@ public class MainTemp {
 	
 	public static void main(String[] args){
 
-	 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 	String strDate1 = "23-06-2016";
 	String strDate1_1 = "12-12-2016";
 	

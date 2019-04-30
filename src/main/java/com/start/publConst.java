@@ -1,7 +1,9 @@
 package com.start;
 
-/**		Enumerator 
-    	Public Project Constants, names and texts **/
+/**************************************************
+ * Enumerator
+ * Public Project Constants, names and texts 
+***************************************************/
 
 import java.io.BufferedReader;
 import java.io.FileReader;
