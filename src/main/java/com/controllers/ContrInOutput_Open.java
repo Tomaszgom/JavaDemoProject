@@ -29,7 +29,7 @@ import javafx.application.Application;
 	 
 	    @Override
 	    public void start(final Stage stage) {
-	//	  public void main(final Stage stage) {
+
 	    	stage.setTitle("File Chooser");
 	 
 	        final FileChooser fileChooser = new FileChooser();	              		        

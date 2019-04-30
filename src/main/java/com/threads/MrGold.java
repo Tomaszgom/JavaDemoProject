@@ -42,7 +42,7 @@ public class MrGold extends Task<Void> {
 			//System.out.println("Mr Gold. Interrupted.");
 			return null;
 		}		
-		//return null;	        
+		        
     }      
    }
 

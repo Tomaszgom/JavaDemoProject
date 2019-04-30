@@ -11,20 +11,32 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
- 
 public final class DPFileChooser extends Application {
  
     private Desktop desktop = Desktop.getDesktop();
  
     @Override
     public void start(final Stage stage) {
+    	
+      	Alert alert = new Alert(AlertType.NONE, "Program will read Log file and save it to the database. Click next to select the file.", ButtonType.NEXT, ButtonType.CANCEL);
+      	alert.showAndWait();
+
+      	if (alert.getResult() == ButtonType.CANCEL) {
+      		  System.exit(0);
+      		// return;
+      	}
+    	
+    	
         stage.setTitle("File Chooser");
  
         final FileChooser fileChooser = new FileChooser();
