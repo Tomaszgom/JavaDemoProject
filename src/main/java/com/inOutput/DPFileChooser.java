@@ -1,4 +1,7 @@
 package com.inOutput;
+/*
+ * File Chooser
+ */
 
 import java.awt.Desktop;
 import java.io.File;
@@ -28,7 +31,7 @@ public final class DPFileChooser extends Application {
     @Override
     public void start(final Stage stage) {
     	
-      	Alert alert = new Alert(AlertType.NONE, "Program will read Log file and save it to the database. Click next to select the file.", ButtonType.NEXT, ButtonType.CANCEL);
+      	Alert alert = new Alert(AlertType.NONE, "Program will read file and return file path. Click next to select the file.", ButtonType.NEXT, ButtonType.CANCEL);
       	alert.showAndWait();
 
       	if (alert.getResult() == ButtonType.CANCEL) {
