@@ -1,15 +1,17 @@
 package com.collectProjectScheduler;
 
-import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.time.temporal.ChronoUnit;
+
+/**
+ * 
+ * @author Tomasz Gomoradzki
+ * Working development class, part of Project Scheduler Module
+ * Left for reference, to be turned into JUnit testing
+ * More information about the module in Controllers package, Project Scheduler Controller Class
+ * 
+ */
+
 
 public class TMain{
 	
@@ -22,24 +24,25 @@ public class TMain{
 	public static void main(String[] args){
 				
 		DProject project = new DProject();		
-			PStagePro stage1 = new PStagePro("Stage_1");
-			PStagePro stage2 = new PStagePro("Stage_2");
-			PStagePro stage3 = new PStagePro("Stage_3");	
+			PStageWithProgression stage1 = new PStageWithProgression("Stage_1");
+			PStageWithProgression stage2 = new PStageWithProgression("Stage_2");
+			PStageWithProgression stage3 = new PStageWithProgression("Stage_3");	
+			
 		project.addStageToProject(stage1);
 		project.addStageToProject(stage2);
 		project.addStageToProject(stage3);
 		
-		TaskPrt Task_1 = new TaskPrt("Task_1", GetLocDate("21-01-2016"), GetLocDate("24-01-2016"), "Priority_1", "Not Started");
-		TaskPrt Task_2 = new TaskPrt("Task_2", GetLocDate("20-01-2016"), GetLocDate("27-01-2016"), "Priority_2", "Completed");
-		TaskPrt Task_3 = new TaskPrt("Task_3", GetLocDate("02-01-2016"), GetLocDate("07-01-2016"), "Priority_3", "Completed");	
+		TaskPrioritized Task_1 = new TaskPrioritized("Task_1", GetLocDate("21-01-2016"), GetLocDate("24-01-2016"), "Priority_1", "Not Started");
+		TaskPrioritized Task_2 = new TaskPrioritized("Task_2", GetLocDate("20-01-2016"), GetLocDate("27-01-2016"), "Priority_2", "Completed");
+		TaskPrioritized Task_3 = new TaskPrioritized("Task_3", GetLocDate("02-01-2016"), GetLocDate("07-01-2016"), "Priority_3", "Completed");	
 		
-		TaskPrt Task_4 = new TaskPrt("Task_4", GetLocDate("01-01-2016"), GetLocDate("11-01-2016"), "Priority_4", "Not Started");
-		TaskPrt Task_5 = new TaskPrt("Task_5", GetLocDate("01-01-2016"), GetLocDate("31-01-2016"), "Priority_5", "Not Started");		
-		TaskPrt Task_6 = new TaskPrt("Task_6", GetLocDate("01-01-2016"), GetLocDate("21-01-2016"), "Priority_6", "Not Started");
+		TaskPrioritized Task_4 = new TaskPrioritized("Task_4", GetLocDate("01-01-2016"), GetLocDate("11-01-2016"), "Priority_4", "Not Started");
+		TaskPrioritized Task_5 = new TaskPrioritized("Task_5", GetLocDate("01-01-2016"), GetLocDate("31-01-2016"), "Priority_5", "Not Started");		
+		TaskPrioritized Task_6 = new TaskPrioritized("Task_6", GetLocDate("01-01-2016"), GetLocDate("21-01-2016"), "Priority_6", "Not Started");
 		
-		TaskPrt Task_7 = new TaskPrt("Task_7", GetLocDate("01-01-2016"), GetLocDate("04-01-2016"), "Priority_7", "Not Started");
-		TaskPrt Task_8 = new TaskPrt("Task_8", GetLocDate("01-01-2016"), GetLocDate("03-01-2016"), "Priority_8", "Not Started");		
-		TaskPrt Task_9 = new TaskPrt("Task_9", GetLocDate("01-01-2016"), GetLocDate("02-01-2016"), "Priority_9", "Not Started");		
+		TaskPrioritized Task_7 = new TaskPrioritized("Task_7", GetLocDate("01-01-2016"), GetLocDate("04-01-2016"), "Priority_7", "Not Started");
+		TaskPrioritized Task_8 = new TaskPrioritized("Task_8", GetLocDate("01-01-2016"), GetLocDate("03-01-2016"), "Priority_8", "Not Started");		
+		TaskPrioritized Task_9 = new TaskPrioritized("Task_9", GetLocDate("01-01-2016"), GetLocDate("02-01-2016"), "Priority_9", "Not Started");		
 		
 		stage1.addTaskToPStage(Task_1);
 		stage1.addTaskToPStage(Task_2);
@@ -52,7 +55,7 @@ public class TMain{
 		StringBuilder out = new StringBuilder();
 		DateTimeFormatter dtformat = DateTimeFormatter.ofPattern("dd/MM/yyyy"); // "d M yy");
 				
-		for (PStagePro stage : project.getProjectStages()) {
+		for (PStageWithProgression stage : project.getProjectStages()) {
 			
 			if(!stage.getPStageTasks().isEmpty()) {
 			out.append("------------Stage '"+stage.GetStageName()+"' details ----------------"+"\n");

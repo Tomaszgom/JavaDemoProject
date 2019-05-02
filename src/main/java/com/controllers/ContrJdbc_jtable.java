@@ -9,9 +9,9 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-import com.composition.CompositionMain;
 import com.jtables.JTables;
 import com.jtables.LoadSQL;
+import com.scomposition.CompositionMain;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

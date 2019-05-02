@@ -1,8 +1,15 @@
 package com.collectProjectScheduler;
 
+/**
+ * 
+ * @author Tomasz Gomoradzki
+ * Task object class, part of Project Scheduler Module
+ * More information about the module in Controllers package, Project Scheduler Controller Class
+ * 
+ */
+
 import java.time.Duration;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import javax.swing.JOptionPane;

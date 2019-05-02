@@ -4,7 +4,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 
-import com.composition.CompositionMain;
+import com.scomposition.CompositionMain;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,7 +23,7 @@ public class ContrComposition {
 		 ImgVPink.setVisible(false);
 	 }
 		 
-	//   ---------   Action Button
+	 	/* Action Button */
 	    @FXML
 	    public void ActbutCheckTheCar(ActionEvent ev) {  	
 	    	txtArOutput.setText(CompositionMain.main(null));

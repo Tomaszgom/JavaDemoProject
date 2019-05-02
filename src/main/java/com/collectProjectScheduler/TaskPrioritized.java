@@ -6,14 +6,23 @@ import java.util.LinkedList;
 
 import javax.swing.JOptionPane;
 
-public class TaskPrt extends Task{
+/**
+ * 
+ * @author Tomasz Gomoradzki
+ * Task Prioritized object class which is part of Project Scheduler Module
+ * Extension of Task class, handles tasks with priorities
+ * More information about the module in Controllers package, Project Scheduler Controller Class
+ * 
+ */
+
+public class TaskPrioritized extends Task{
 	
 	private String taskPriotity;
 	private String taskStatus;
 	private LinkedList<String> taskStatusList = new LinkedList<String>();
 	
 // --- Constructor
-	public TaskPrt(String taskName, LocalDate tTimeStart, LocalDate tTimeEnd, String taskPriotity, String status){
+	public TaskPrioritized(String taskName, LocalDate tTimeStart, LocalDate tTimeEnd, String taskPriotity, String status){
 		super(taskName, tTimeStart, tTimeEnd);
 		
 		taskStatusList.add("Not Started");

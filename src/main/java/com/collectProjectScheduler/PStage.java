@@ -6,15 +6,23 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+/**
+ * 
+ * @author Tomasz Gomoradzki
+ * Stage object class, part of Project Scheduler Module
+ * More information about the module in Controller package, Project Scheduler Controller Class
+ * 
+ */
+
 public class PStage{
 	
 	private String stageName;
-	private ArrayList<TaskPrt> PStageTasks;
+	private ArrayList<TaskPrioritized> PStageTasks;
 	
 		//	Constructor
 	
 	public PStage(String stgName){ 
-		PStageTasks = new ArrayList<TaskPrt>();//Initialising, Stage Task List
+		PStageTasks = new ArrayList<TaskPrioritized>();//Initialising, Stage Task List
 		stageName = stgName;
 	}
 
@@ -25,7 +33,7 @@ public class PStage{
 	
     	//	Getters
     
-	public ArrayList<TaskPrt> getPStageTasks(){
+	public ArrayList<TaskPrioritized> getPStageTasks(){
 		return PStageTasks;
 	}
 	public String GetStageName() {
@@ -33,7 +41,7 @@ public class PStage{
 	}
 	
 	
-	public void addTaskToPStage(TaskPrt tsk){
+	public void addTaskToPStage(TaskPrioritized tsk){
 		PStageTasks.add(tsk);
 		// JOptionPane.showMessageDialog(null, "Task "+tsk.getTaskName()+" has been added to stage "+GetStageName()+".");
 	}
@@ -52,9 +60,9 @@ public class PStage{
 
 		// Comparator for sorting
 	
-	Comparator<TaskPrt> comparator = new Comparator<TaskPrt>() {
+	Comparator<TaskPrioritized> comparator = new Comparator<TaskPrioritized>() {
 		@Override
-		public int compare(TaskPrt tsk1, TaskPrt tsk2) {
+		public int compare(TaskPrioritized tsk1, TaskPrioritized tsk2) {
 			return tsk1.compareTo(tsk2);
 		}
 	};
@@ -69,7 +77,7 @@ public class PStage{
 			Collections.sort(getPStageTasks(), comparator);	
 			
 			StringBuilder out = new StringBuilder();		
-			for (TaskPrt tsk : getPStageTasks()) {		
+			for (TaskPrioritized tsk : getPStageTasks()) {		
 					out.append("Task: "+tsk.getTaskName());
 					out.append("  Start: "+tsk.getTTimeStart());
 					out.append("  End: "+tsk.getTTimeEnd());
@@ -82,8 +90,8 @@ public class PStage{
 	
 	public LocalDate getStartDateOfStage(){
 		LocalDate frStartDate = null, lstStartDate = null;		
-		for (TaskPrt tsk : getPStageTasks()) {				
-			frStartDate = ((TaskPrt)tsk).getTTimeStart();		
+		for (TaskPrioritized tsk : getPStageTasks()) {				
+			frStartDate = ((TaskPrioritized)tsk).getTTimeStart();		
 			if (lstStartDate==null) {lstStartDate = frStartDate;}		
 			if((int)(Duration.between(lstStartDate.atTime(0, 0), frStartDate.atTime(0, 0))).toDays()<0) {lstStartDate = frStartDate;}	
 		}
@@ -92,7 +100,7 @@ public class PStage{
 	
 	public LocalDate getEndDateOfStage(){
 		LocalDate frEndDate = null, lstEndDate = null;		
-		for (TaskPrt tsk : getPStageTasks()) {				
+		for (TaskPrioritized tsk : getPStageTasks()) {				
 			frEndDate = ((Task)tsk).getTTimeEnd();		
 			if (lstEndDate==null) {lstEndDate = frEndDate;}				
 			if(Duration.between(frEndDate.atTime(0, 0), lstEndDate.atTime(0, 0)).toDays()<0) {lstEndDate = frEndDate;}	

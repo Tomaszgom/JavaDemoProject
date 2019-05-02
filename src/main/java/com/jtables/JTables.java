@@ -20,6 +20,13 @@ package com.jtables;
 	import javax.swing.JTextField;
 	import javax.swing.table.DefaultTableModel;
 
+	/**
+	 * 
+	 * JTable connecting to database Customer table
+	 * allows to display, add, remove and modify customer data
+	 *
+	 */
+	
 	public class JTables extends JFrame{
 		
 		static JLabel lTopHeader, lFirstName, lLastName, lCity, lPoints, lLastLoginDate;		
@@ -316,8 +323,9 @@ package com.jtables;
 			
 		}
 		
-				//  Format String to  date		
-		public static java.util.Date getADate(String sDate){			
+				//  Format String to date		
+		public static java.util.Date getADate(String sDate){
+			
 			SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd");
 			
 			try {

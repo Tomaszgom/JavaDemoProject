@@ -1,4 +1,4 @@
-package com.composition;
+package com.scomposition;
 
 public class Wheel {
     private String type;

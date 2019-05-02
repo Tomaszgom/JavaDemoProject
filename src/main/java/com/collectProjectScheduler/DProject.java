@@ -1,24 +1,31 @@
 package com.collectProjectScheduler;
+
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-import javax.swing.JOptionPane;
+/**
+ * 
+ * @author Tomasz Gomoradzki
+ * Project object class which is part of Project Scheduler Module
+ * More information about the module in Controllers package, Project Scheduler Controller Class
+ * 
+ */
 
 public class DProject {
-	private ArrayList<PStagePro> projectStages;
+	private ArrayList<PStageWithProgression> projectStages;
 	private String projectName;
 
 //--------Constructor
 	public DProject(){
-		projectStages = new ArrayList<PStagePro>();  	//Initializing, Activity List
+		projectStages = new ArrayList<PStageWithProgression>();  	//Initializing, Activity List
 		projectName = "Demo Project";
 	}
 	
 	//-------Getters	
-	public ArrayList<PStagePro> getProjectStages(){
+	public ArrayList<PStageWithProgression> getProjectStages(){
 			return projectStages;
 	}		
-	public void addStageToProject(PStagePro stage){
+	public void addStageToProject(PStageWithProgression stage){
 		projectStages.add(stage);
 	}
 	public String GetProjectName() {
@@ -28,7 +35,7 @@ public class DProject {
 	//------------print Tasks	
 		public String GetPrintProjectStages(){				
 				StringBuilder out = new StringBuilder();				
-			for (PStagePro stage : getProjectStages()) {				
+			for (PStageWithProgression stage : getProjectStages()) {				
 				out.append("Stage name: "+stage.GetStageName()+"\n");
 				out.append(stage.GetPrintPStageTasks()+"\n");							
 			}	
@@ -40,7 +47,7 @@ public class DProject {
   		StringBuilder out = new StringBuilder();
 		DateTimeFormatter dtformat = DateTimeFormatter.ofPattern("dd/MM/yyyy"); // "d M yy");
 			
-		for (PStagePro stage : this.getProjectStages()) {
+		for (PStageWithProgression stage : this.getProjectStages()) {
 			
 			if(!stage.getPStageTasks().isEmpty()) {
 			out.append("------------  Stage '"+stage.GetStageName()+"' details  ----------------"+"\n");

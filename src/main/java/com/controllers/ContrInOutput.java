@@ -14,8 +14,8 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-import com.composition.CompositionMain;
 import com.inOutput.Input;
+import com.scomposition.CompositionMain;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

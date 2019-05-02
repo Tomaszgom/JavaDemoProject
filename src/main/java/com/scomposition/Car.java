@@ -1,4 +1,12 @@
-package com.composition;
+package com.scomposition;
+
+/**
+ * 
+ * @author Tomasz Gomoradzki
+ * Car object class which is part of Composition, Encapsulation module
+ * More information about the module in Controllers package, Composition         Controller Class
+ * 
+ */
 
 public class Car {
     private Engine cEngine;

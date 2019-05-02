@@ -1,4 +1,4 @@
-package com.composition;
+package com.scomposition;
 
 public class OilFilter {
     private String wear;

@@ -38,8 +38,8 @@ import javax.swing.JOptionPane;
 
 import com.collectProjectScheduler.PStage;
 import com.collectProjectScheduler.PItem;
-import com.collectProjectScheduler.PStagePro;
-import com.collectProjectScheduler.TaskPrt;
+import com.collectProjectScheduler.PStageWithProgression;
+import com.collectProjectScheduler.TaskPrioritized;
 import com.collectProjectScheduler.DProject;
 import com.hashMapGame.MapAndLoadPlaces;
 
@@ -54,6 +54,17 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Rectangle2D;
+
+/**
+ * 
+ * @author Tomasz Gomoradzki
+ * 
+ * Controller handing Project Scheduler Module. This program allows to plan project by adding, removing its parts,
+ * reviewing and displaying details as well as statistics. Project consists of Stages and each Stage consists of Tasks.
+ * This application module incorporates Collections, including Observable list, LinkedList, ArrayList, objects Inheritance,
+ * java.time library, Comparable Interface implementation, Comparator, sorting and many more.
+ *
+ */
 
 public class ContrCollectProjectScheduler {
 		
@@ -71,10 +82,10 @@ public class ContrCollectProjectScheduler {
 	@FXML private Button butSortTasks;	
 	@FXML private Button butShowProjectStats;	
 	
-    @FXML private ListView<PStagePro> listViewStages = new ListView<PStagePro>();
-    @FXML private ListView<TaskPrt> listViewTasks = new ListView<TaskPrt>();     
-        private ObservableList<PStagePro> observableProjectStages;
-        private ObservableList<TaskPrt> observableStageTasks;       
+    @FXML private ListView<PStageWithProgression> listViewStages = new ListView<PStageWithProgression>();
+    @FXML private ListView<TaskPrioritized> listViewTasks = new ListView<TaskPrioritized>();     
+        private ObservableList<PStageWithProgression> observableProjectStages;
+        private ObservableList<TaskPrioritized> observableStageTasks;       
         static DProject project;
 	
 	
@@ -93,11 +104,11 @@ public class ContrCollectProjectScheduler {
 			listViewStages.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
 			listViewStages.getSelectionModel().selectFirst();	
 			
-		 listViewStages.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<PStagePro>() {
+		 listViewStages.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<PStageWithProgression>() {
 	            @Override
-	            public void changed(ObservableValue<? extends PStagePro> observable, PStagePro oldValue, PStagePro newValue) {
+	            public void changed(ObservableValue<? extends PStageWithProgression> observable, PStageWithProgression oldValue, PStageWithProgression newValue) {
 	                if(newValue != null) {
-	                	PStagePro stage = listViewStages.getSelectionModel().getSelectedItem();
+	                	PStageWithProgression stage = listViewStages.getSelectionModel().getSelectedItem();
 	                	
 	                	System.out.println("Stage Clicked"+stage.GetStageName());
 	                	
@@ -117,11 +128,11 @@ public class ContrCollectProjectScheduler {
     	listViewTasks.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     	listViewTasks.getSelectionModel().selectFirst();
     	
-    	listViewTasks.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TaskPrt>() {
+    	listViewTasks.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TaskPrioritized>() {
 	            @Override
-	            public void changed(ObservableValue<? extends TaskPrt> observable, TaskPrt oldValue, TaskPrt newValue) {
+	            public void changed(ObservableValue<? extends TaskPrioritized> observable, TaskPrioritized oldValue, TaskPrioritized newValue) {
 	                if(newValue != null) {
-	                	TaskPrt task = listViewTasks.getSelectionModel().getSelectedItem();	                	
+	                	TaskPrioritized task = listViewTasks.getSelectionModel().getSelectedItem();	                	
 	                	//System.out.println("Stage Clicked"+task.getTaskName());
 	                	txtfTaskName.setText(task.getTaskName());
 	                	datePickStart.setValue(task.getTTimeStart());
@@ -149,7 +160,7 @@ public class ContrCollectProjectScheduler {
 		listViewStages.getSelectionModel().selectFirst();
 	 }
 	 
-	 public void LoadTasksListView(PStagePro stage) {
+	 public void LoadTasksListView(PStageWithProgression stage) {
 			// Get Stage Tasks into Observable list
      	LoadObsevbleListStageTasks(stage.getPStageTasks());	                	
      	listViewTasks.setItems(observableStageTasks);
@@ -158,19 +169,19 @@ public class ContrCollectProjectScheduler {
 	 }
 	 
 	 // --- Load Stages to observable list
-	 public ObservableList<PStagePro> LoadObsevbleListProjectStages(ArrayList<PStagePro> pStages){
+	 public ObservableList<PStageWithProgression> LoadObsevbleListProjectStages(ArrayList<PStageWithProgression> pStages){
 		 	observableProjectStages = FXCollections.observableArrayList();
 		 	observableProjectStages.clear();	 
-		 for(PStagePro stage : pStages) {
+		 for(PStageWithProgression stage : pStages) {
 			 observableProjectStages.add(stage);
 		 }
 		 return observableProjectStages;
 	 }
 	// --- Load Tasks to observable list
-	 public ObservableList<TaskPrt> LoadObsevbleListStageTasks(ArrayList<TaskPrt> pTasks){
+	 public ObservableList<TaskPrioritized> LoadObsevbleListStageTasks(ArrayList<TaskPrioritized> pTasks){
 		 	observableStageTasks = FXCollections.observableArrayList();
 		 	observableStageTasks.clear();	 
-		 for(TaskPrt task : pTasks) {
+		 for(TaskPrioritized task : pTasks) {
 			 observableStageTasks.add(task);
 		 }
 		 return observableStageTasks;
@@ -180,7 +191,7 @@ public class ContrCollectProjectScheduler {
 	    @FXML
 	    public void OnActbutAddStage(ActionEvent ev) {
 	    	
-	    	project.addStageToProject(new PStagePro(txtfStageName.getText().trim()));
+	    	project.addStageToProject(new PStageWithProgression(txtfStageName.getText().trim()));
 	    	LoadStagesListView();
 	    		        	        	    	
 	        System.out.println(txtfTaskName.getText().trim());
@@ -195,12 +206,12 @@ public class ContrCollectProjectScheduler {
 	    @FXML
 	    public void OnActbutAddTask(ActionEvent ev) {
 	    	int index = 0;
-	    	for (PStagePro stage : project.getProjectStages()) {
+	    	for (PStageWithProgression stage : project.getProjectStages()) {
 	    		if (txtfStageName.getText().trim().equals(stage.GetStageName())) {
 	    			index = project.getProjectStages().indexOf(stage);
 	    		}
 	    	}	    		    	
-			TaskPrt tTask = new TaskPrt(txtfTaskName.getText().trim(), datePickStart.getValue(), datePickEnd.getValue(), comBoxPriority.getValue(), comBoxStatus.getValue());			
+			TaskPrioritized tTask = new TaskPrioritized(txtfTaskName.getText().trim(), datePickStart.getValue(), datePickEnd.getValue(), comBoxPriority.getValue(), comBoxStatus.getValue());			
 			project.getProjectStages().get(index).addTaskToPStage(tTask);
 			LoadTasksListView(project.getProjectStages().get(index));	    		    	
 	    }
@@ -221,13 +232,13 @@ public class ContrCollectProjectScheduler {
 	    @FXML
 	    public void OnActButSortTasks(ActionEvent ev) { 
 
-	    	for (PStagePro stage : project.getProjectStages()) {
+	    	for (PStageWithProgression stage : project.getProjectStages()) {
 	    		if(!stage.getPStageTasks().isEmpty()) {
 	    			stage.SortTasksByStartDate();
 	    		}
 	    	}	    	
 	    	int index = 0;
-	    	for (PStagePro stage : project.getProjectStages()) {
+	    	for (PStageWithProgression stage : project.getProjectStages()) {
 	    		if (txtfStageName.getText().trim().equals(stage.GetStageName())) {
 	    			index = project.getProjectStages().indexOf(stage);
 	    		}
@@ -237,7 +248,7 @@ public class ContrCollectProjectScheduler {
 	    @FXML
 	    public void OnActButRemoveStage(ActionEvent ev) { 
 	    	int index = 0;
-	    	for (PStagePro stage : project.getProjectStages()) {
+	    	for (PStageWithProgression stage : project.getProjectStages()) {
 	    		if (txtfStageName.getText().trim().equals(stage.GetStageName())) {
 	    			index = project.getProjectStages().indexOf(stage);
 	    			project.getProjectStages().remove(index);	    			
@@ -250,10 +261,10 @@ public class ContrCollectProjectScheduler {
 	    @FXML
 	    public void OnActButRemoveTask(ActionEvent ev) { 
 	    	int index = 0;
-	    	PStagePro stageToRemove = null;
-	    	for (PStagePro stage : project.getProjectStages()) {
+	    	PStageWithProgression stageToRemove = null;
+	    	for (PStageWithProgression stage : project.getProjectStages()) {
 	    		if (txtfStageName.getText().trim().equals(stage.GetStageName())) {
-	    			for (TaskPrt tsk : stage.getPStageTasks()) {
+	    			for (TaskPrioritized tsk : stage.getPStageTasks()) {
 	    				if (txtfTaskName.getText().trim().equals(tsk.getTaskName())) {
 	    					stageToRemove = stage;
 	    					index = stage.getPStageTasks().indexOf(tsk);
@@ -274,24 +285,24 @@ public class ContrCollectProjectScheduler {
 	    	
 	    	project = new DProject();	
 	    	
-			PStagePro stage1 = new PStagePro("Business Analysis");
-			PStagePro stage2 = new PStagePro("Design");
-			PStagePro stage3 = new PStagePro("Development");		
+			PStageWithProgression stage1 = new PStageWithProgression("Business Analysis");
+			PStageWithProgression stage2 = new PStageWithProgression("Design");
+			PStageWithProgression stage3 = new PStageWithProgression("Development");		
 			project.addStageToProject(stage1);
 			project.addStageToProject(stage2);
 			project.addStageToProject(stage3);
 			
-			TaskPrt Task_1 = new TaskPrt("Enterprise Analysis", GetLocDate("21-01-2016"), GetLocDate("24-01-2016"), "Low", "Not Started");
-			TaskPrt Task_2 = new TaskPrt("Requirements Elicitation", GetLocDate("20-01-2016"), GetLocDate("27-01-2016"), "High", "Completed");
-			TaskPrt Task_3 = new TaskPrt("Requirements Analysis", GetLocDate("02-01-2016"), GetLocDate("07-01-2016"), "Medium", "Completed");	
+			TaskPrioritized Task_1 = new TaskPrioritized("Enterprise Analysis", GetLocDate("21-01-2016"), GetLocDate("24-01-2016"), "Low", "Not Started");
+			TaskPrioritized Task_2 = new TaskPrioritized("Requirements Elicitation", GetLocDate("20-01-2016"), GetLocDate("27-01-2016"), "High", "Completed");
+			TaskPrioritized Task_3 = new TaskPrioritized("Requirements Analysis", GetLocDate("02-01-2016"), GetLocDate("07-01-2016"), "Medium", "Completed");	
 			
-			TaskPrt Task_4 = new TaskPrt("Define Output and data", GetLocDate("10-03-2016"), GetLocDate("11-04-2016"), "Medium", "Not Started");
-			TaskPrt Task_5 = new TaskPrt("Define logic to get output", GetLocDate("11-04-2016"), GetLocDate("31-05-2016"), "Low", "Not Started");		
-			TaskPrt Task_6 = new TaskPrt("Create Project documentation", GetLocDate("01-03-2016"), GetLocDate("21-03-2016"), "Medium", "Not Started");
+			TaskPrioritized Task_4 = new TaskPrioritized("Define Output and data", GetLocDate("10-03-2016"), GetLocDate("11-04-2016"), "Medium", "Not Started");
+			TaskPrioritized Task_5 = new TaskPrioritized("Define logic to get output", GetLocDate("11-04-2016"), GetLocDate("31-05-2016"), "Low", "Not Started");		
+			TaskPrioritized Task_6 = new TaskPrioritized("Create Project documentation", GetLocDate("01-03-2016"), GetLocDate("21-03-2016"), "Medium", "Not Started");
 			
-			TaskPrt Task_7 = new TaskPrt("Interface Development", GetLocDate("03-05-2016"), GetLocDate("04-06-2016"), "High", "Not Started");
-			TaskPrt Task_8 = new TaskPrt("Basic Class Development", GetLocDate("02-05-2016"), GetLocDate("03-06-2016"), "Medium", "Not Started");		
-			TaskPrt Task_9 = new TaskPrt("Extension Class Development", GetLocDate("01-05-2016"), GetLocDate("02-06-2016"), "Low", "Not Started");
+			TaskPrioritized Task_7 = new TaskPrioritized("Interface Development", GetLocDate("03-05-2016"), GetLocDate("04-06-2016"), "High", "Not Started");
+			TaskPrioritized Task_8 = new TaskPrioritized("Basic Class Development", GetLocDate("02-05-2016"), GetLocDate("03-06-2016"), "Medium", "Not Started");		
+			TaskPrioritized Task_9 = new TaskPrioritized("Extension Class Development", GetLocDate("01-05-2016"), GetLocDate("02-06-2016"), "Low", "Not Started");
 				
 			stage1.addTaskToPStage(Task_1);
 			stage1.addTaskToPStage(Task_2);

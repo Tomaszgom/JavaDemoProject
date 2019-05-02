@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 public class Binary {
 	
-   //Try with-resources ensures that data stream is automatically closed
+  //Try with-resources ensures that data stream is automatically closed
     public static void main(String[] args) throws IOException {
     	ReadFromBinary();
     	
@@ -23,7 +23,7 @@ public class Binary {
           
     		locFile.writeInt(5);
     		locFile.writeUTF("\t Hello! This is content saved in binary .dat file");  		
-        	}catch(IOException e) {
+        	} catch(IOException e) {
             	JOptionPane.showMessageDialog(null, "IOException: " + e.getMessage(),"Error", JOptionPane.ERROR_MESSAGE);
             	return;
         	}

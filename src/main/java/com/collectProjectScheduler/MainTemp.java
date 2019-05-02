@@ -4,6 +4,15 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * 
+ * @author Tomasz Gomoradzki
+ * Working development class part of Project Scheduler Module
+ * Left for reference, to be turned into JUnit testing
+ * More information about the module in Controllers package, Project Scheduler Controller Class
+ * 
+ */
+
 public class MainTemp {
 	
 	public static void main(String[] args){
