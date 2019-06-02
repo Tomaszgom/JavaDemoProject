@@ -14,7 +14,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
-/*************************************************
+/************************************************
  * Launch Application Class
 *************************************************/	
 
