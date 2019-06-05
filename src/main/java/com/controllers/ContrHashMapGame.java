@@ -190,7 +190,7 @@ public class ContrHashMapGame {
 	    }
 	    
 	    
-	//-------------------------Places Screen Map----------------------
+	   //---------------------  Places Screen Map  ----------------------
 	    
 	   private void ClearPlacesScrMap() { //Clears background for entire map
 	    	for(Integer lbPl: PlacesScrMap.keySet())

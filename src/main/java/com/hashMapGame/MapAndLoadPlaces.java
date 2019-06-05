@@ -57,7 +57,7 @@ public class MapAndLoadPlaces implements Map<Integer, Place> {
         ex.printStackTrace();
     }
 		
-	}//------------static END
+	}//------------ Static END
 	
 	//-----Save into .dat - Save entire objects into dat file-----------//
 	public void SaveLocationsAsObjects() {

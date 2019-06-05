@@ -22,6 +22,13 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 
+/**
+ * 
+ * @author Tomasz Gomoradzki
+ * Application main screen controller handling mouse actions and displaying messages
+ *
+ */
+
 public class ContrDemoMain {
   
     @FXML private Button butAbout;
@@ -43,8 +50,8 @@ public class ContrDemoMain {
         
         
 	// Track the mouse if it is inside of the panel		
-		ListenForMouse lForMouse = new ListenForMouse();
-		//About.setOnMouseEntered(value);
+	ListenForMouse lForMouse = new ListenForMouse();
+	//About.setOnMouseEntered(value);
 				
 		//addMouseListener(lForMouse);
 		
@@ -82,7 +89,7 @@ public class ContrDemoMain {
           
     } */   
     
-  //   About button clicked   
+    //  About button clicked   
     @FXML
     public void ActButAbout(ActionEvent ev) {
     	//System.out.println("About button clicked");
@@ -204,11 +211,8 @@ public class ContrDemoMain {
 
 
     
+    /*   Handling Buttons actions 'onMouseEntered' and 'onMouseExit' methods   */
     
-    
-    
-    
-  //   About button 'onMouseEntered' method   
     @FXML
     public void butAboutMosEtr() {
     lblMain.setText(publConst.lblMainAbout.getText());
