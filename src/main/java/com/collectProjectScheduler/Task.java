@@ -19,7 +19,6 @@ public class Task implements Comparable<Task>{
 		private String taskName;
 	    private LocalDate tTimeStart, tTimeEnd;
 	
-// --- Constructor
 	public Task(String taskName, LocalDate tTimeStart, LocalDate tTimeEnd){	
 		
 		// if start date after end date

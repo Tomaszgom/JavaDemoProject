@@ -19,7 +19,6 @@ public class PStage{
 	private String stageName;
 	private ArrayList<TaskPrioritized> PStageTasks;
 	
-		//	Constructor
 	
 	public PStage(String stgName){ 
 		PStageTasks = new ArrayList<TaskPrioritized>();//Initialising, Stage Task List
@@ -31,7 +30,6 @@ public class PStage{
         return stageName;
     } 
 	
-    	//	Getters
     
 	public ArrayList<TaskPrioritized> getPStageTasks(){
 		return PStageTasks;
@@ -58,7 +56,7 @@ public class PStage{
 			return out.toString();
 	}
 
-		// Comparator for sorting
+		//	Comparator for sorting
 	
 	Comparator<TaskPrioritized> comparator = new Comparator<TaskPrioritized>() {
 		@Override
@@ -112,7 +110,9 @@ public class PStage{
 		return Duration.between(this.getStartDateOfStage().atTime(0, 0), this.getEndDateOfStage().atTime(0, 0)).toDays();
 	}
 	
+	
 	// ** Calculate Activity Time Statistics ** //
+	
 	
 		//Get the Time of shortest task in Stage
 	

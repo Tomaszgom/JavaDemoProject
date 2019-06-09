@@ -21,7 +21,7 @@ public class TaskPrioritized extends Task{
 	private String taskStatus;
 	private LinkedList<String> taskStatusList = new LinkedList<String>();
 	
-// --- Constructor
+
 	public TaskPrioritized(String taskName, LocalDate tTimeStart, LocalDate tTimeEnd, String taskPriotity, String status){
 		super(taskName, tTimeStart, tTimeEnd);
 		

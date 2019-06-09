@@ -20,10 +20,10 @@ public class Place implements Serializable{
 	
 		if(ways != null) {
 									
-			//-----Tree Map Alternative Constructor without Comparator
+			/** Tree Map Alternative Constructor without Comparator **/
 			//private Map<String, Integer> wMap = new TreeMap<String, Integer>(ways);
 			
-			//-----TreeMap Constructor with Comparator
+			/** TreeMap Constructor with Comparator **/
 			Map<String, Integer> wMap = new TreeMap<String, Integer>(new Comparator<String>() {
                 	@Override
                 	public int compare(String s1, String s2) {

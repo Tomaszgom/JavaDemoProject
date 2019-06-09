@@ -39,7 +39,8 @@ public class Main extends Application {
 			//scene.getStylesheets().add(getClass().getResource("/com/css/welcomeScreen.css").toExternalForm());
 			primaryStage.setTitle(publConst.ProjName.getText());
 			primaryStage.setScene(scene);
-			primaryStage.show();*/			
+			primaryStage.show();
+*/			
 												
 		} catch(Exception e) {
 			e.printStackTrace();
