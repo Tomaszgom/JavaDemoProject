@@ -5,6 +5,12 @@ import javafx.scene.layout.GridPane;
 import com.threads.MrGold;
 import javafx.fxml.FXML;
 
+/**
+ * 
+ * MrGold window Controller
+ *
+ */
+
 public class ContrThreadsMrGold {
 		
 	@FXML private Label lbMr;

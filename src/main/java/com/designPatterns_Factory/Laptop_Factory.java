@@ -1,6 +1,10 @@
 package com.designPatterns_Factory;
 
-//Factory creates laptops, encapsulating creation
+/**
+ * 
+ * Factory Class handles creation of Laptop objects, encapsulating creation
+ *
+ */
 
 public class Laptop_Factory{
 	

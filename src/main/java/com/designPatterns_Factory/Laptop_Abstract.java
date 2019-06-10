@@ -1,5 +1,12 @@
 package com.designPatterns_Factory;
 
+/**
+ * Laptop_Abstract abstract Class available to be extended by the Laptop classes
+ * Laptop_Abstract descendants are classes representing objects to be produced by Factory
+ * 
+ *
+ */
+
 public abstract class Laptop_Abstract {
 	
 	private String type;

@@ -3,18 +3,18 @@ package com.controllers;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
-
 import java.io.IOException;
-
 import javax.swing.JOptionPane;
-
 import com.jtables.JTables;
 import com.jtables.LoadSQL;
-import com.scomposition.CompositionMain;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+
+/**
+ * 
+ * Controller handling GUI actions in JTable Clients Managment Module
+ *
+ */
 
 public class ContrJdbc_jtable {
 		

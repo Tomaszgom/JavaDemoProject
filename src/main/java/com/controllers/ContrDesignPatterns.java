@@ -1,9 +1,5 @@
 package com.controllers;
 
-import java.io.IOException;
-
-import com.designPatterns_Strategy.MainFileSystem;
-
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
@@ -14,8 +10,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
+
+/**
+ * 
+ * Controller handling DesignPatterns GUI actions
+ *
+ */
 
 public class ContrDesignPatterns {
     

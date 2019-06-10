@@ -1,11 +1,17 @@
 package com.hashMapGame;
 
 import java.io.Serializable;
-import java.util.HashMap;
 import java.util.TreeMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Comparator;
+
+/**
+ * 
+ * Place Class implementing Serializable, represents Places objects in Rome the Interactive Game
+ * that is places which user can choose, go to and to read about
+ * Serializable has been used to enable saving, serializing objects into .dat file
+ *
+ */
 
 public class Place implements Serializable{
 	

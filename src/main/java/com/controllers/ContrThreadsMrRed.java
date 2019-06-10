@@ -13,6 +13,12 @@ import com.threads.MrRed;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 
+/**
+ * 
+ * MrRed window Controller
+ *
+ */
+
 public class ContrThreadsMrRed {
 		
 	@FXML private Label lbMr;

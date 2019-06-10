@@ -1,16 +1,17 @@
 package com.hashMapGame;
 
-import java.io.BufferedOutputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 //import Input_Output_Basic_src_try_block.Location;
 //import Input_Output_Basic_src_try_block.Locations;
+
+/**
+ * 
+ * Temporary Class handling playing the Game Console
+ *
+ */
 
 public class PlayInConsole {
 

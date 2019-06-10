@@ -6,7 +6,7 @@ import javafx.scene.control.TextArea;
 /**
  * 
  * @author Tomasz Gomoradzki
- * Controller handing displaying Project details.
+ * Controller handing displaying Project details
  * 
  */
 

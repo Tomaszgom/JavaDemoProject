@@ -1,24 +1,22 @@
 package com.controllers;
 
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 import javafx.stage.Window;
-
 import java.io.File;
 import java.io.IOException;
-
 import javax.swing.JOptionPane;
-
 import com.inOutput.Input;
-import com.scomposition.CompositionMain;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+
+/**
+ * 
+ * Controller handling GUI actions in Data In/Out Module
+ *
+ */
 
 public class ContrInOutput {
 		

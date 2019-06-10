@@ -4,41 +4,26 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Scanner;
-import java.util.Set;
-
-import javax.swing.JOptionPane;
-
-import com.hashMapGame.MapAndLoadPlaces;
-import com.threads.MrBlue;
-import com.threads.MrGold;
 import com.threads.MrGoldRun;
 import com.threads.MrGreenRun;
 import com.threads.MrRedRun;
-
-import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
 import javafx.geometry.Rectangle2D;
+
+/**
+ * 
+ * Controller handling GUI actions Threads Presentation
+ *
+ */
 
 public class ContrThreadsMain {
 		
@@ -62,7 +47,7 @@ public class ContrThreadsMain {
 		 
 	 }
 		 
-	//----------Action Button
+	/* Action Button */
 	    @FXML
 	    public void ActStartThreads(ActionEvent ev) {
 	    	System.out.println("Start Threads clicked");;    	

@@ -1,25 +1,20 @@
 package com.controllers;
 
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
-import javafx.stage.Screen;
-import javafx.stage.Stage;
-
-import java.io.IOException;
-
 import com.threads.MrBlue;
-import com.threads.MrGold;
-
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
-import javafx.geometry.Rectangle2D;
+
+/**
+ * 
+ * MrBlue window Controller
+ *
+ */
 
 public class ContrThreadsMrBlue {
 		

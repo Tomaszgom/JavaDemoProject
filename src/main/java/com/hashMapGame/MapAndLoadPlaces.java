@@ -3,9 +3,6 @@ package com.hashMapGame;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
-import java.util.Map.Entry;
-
-import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,16 +23,16 @@ public class MapAndLoadPlaces implements Map<Integer, Place> {
 
 
 	/* Static initialization block, executed one while class is loaded 
-	   one copy of static data shared among all classes	*/
+	 * one copy of static data shared among all classes	*/
 	static {
 
-		/*	Read txt - Load Places	*/
+		/*	Read txt file - Load Places	 */
 
     	ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
-    	try (InputStream inputStreamProperties = classLoader.getResourceAsStream("com/txt/hashMapGame_RomePlaces.txt")) {
+    	try (InputStream inputStreamPlaces = classLoader.getResourceAsStream("com/txt/hashMapGame_RomePlaces.txt")) {
 			// String result = IOUtils.toString(inputStreamProperties, StandardCharsets.UTF_8);
-			InputStreamReader streamReader = new InputStreamReader(inputStreamProperties, StandardCharsets.UTF_8);			
+			InputStreamReader streamReader = new InputStreamReader(inputStreamPlaces, StandardCharsets.UTF_8);			
 			BufferedReader dirFile = new BufferedReader(streamReader);
 						
 //		try (BufferedReader dirFile = new BufferedReader(
@@ -48,20 +45,20 @@ public class MapAndLoadPlaces implements Map<Integer, Place> {
 				int PlaceID = Integer.parseInt(data[0]);
 				String desc = data[1];
 
-				// Map<String, Integer> tempExit = new HashMap<>();
-				// locations.put(loc, new Location(loc, desc, tempExit));
 				places.put(PlaceID, new Place(PlaceID, desc, ways));
-				// System.out.println("Imported PlaceID: " + PlaceID + ": Desc: " + desc);
 			}
 		} catch (IOException ex) {
 			ex.printStackTrace();
-			System.out.println("TG: places not loaded");
 		}
 
-		//------Read txt - Load Ways-----------
-
+    	
+    	/*	Read txt file - Load Ways (alternative way to ready txt file)	*/
+    					
 		try (Scanner scanner = new Scanner(
-				new BufferedReader(new FileReader("./src/main/resources/com/txt/hashMapGame_RomeWays.txt")))) {
+									new BufferedReader(
+										new InputStreamReader(
+												classLoader.getResourceAsStream("com/txt/hashMapGame_RomeWays.txt"), StandardCharsets.UTF_8)))) {
+			
 			scanner.useDelimiter(";");
 			while (scanner.hasNextLine()) {
 				String input = scanner.nextLine();
@@ -70,19 +67,17 @@ public class MapAndLoadPlaces implements Map<Integer, Place> {
 				int PlaceID = Integer.parseInt(data[0]);
 				String way = data[1];
 				int DestinPlaceID = Integer.parseInt(data[2]);
-				// System.out.println("PlaceID: "+PlaceID + " : Way: " + way + " :Destination
-				// Place: " + DestinPlaceID);
 				Place place = places.get(PlaceID);
 				place.addWay(way, DestinPlaceID);
 			}
 
-		} catch (IOException ex) {
-			ex.printStackTrace();
 		}
 
-	}//	Static END
+	} //	Static End
 
-	//-----Save into .dat - Save entire objects into dat file-----------//
+	
+	/*	Save into .dat - Save entire objects into dat file	*/
+	
 	public void SaveLocationsAsObjects() {
 		System.out.println("Start Saving Rome Places...");
 
@@ -93,13 +88,14 @@ public class MapAndLoadPlaces implements Map<Integer, Place> {
 				locFile.writeObject(place);
 				System.out.println("PlaceID: "+place.getPlaceID()+" : "+place.getPlaceDesc());
 			}
-			//System.out.println("Object written to .dat file");
+
 		}catch(IOException ex){
 			ex.printStackTrace();
 		}   
 	}
 
-	//------Override interface methods----------------
+	
+	/* Override interface methods */
 
 	@Override
 	public int size() {

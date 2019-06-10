@@ -1,28 +1,17 @@
 package com.controllers;
 
-	import java.awt.Desktop;
-	import java.io.File;
-	import java.io.IOException;
-	import java.util.List;
-	import java.util.logging.Level;
-	import java.util.logging.Logger;
-
-import javax.swing.JOptionPane;
-
+import java.io.File;
 import javafx.application.Application;
-	import javafx.event.ActionEvent;
-	import javafx.event.EventHandler;
-	import javafx.geometry.Insets;
-	import javafx.scene.Scene;
-	import javafx.scene.control.Button;
-	import javafx.scene.layout.GridPane;
-	import javafx.scene.layout.Pane;
-	import javafx.scene.layout.VBox;
-	import javafx.stage.FileChooser;
-	import javafx.stage.Stage;
-	
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+
+/**
+ * 
+ * Controller handling Selecting files to open
+ *
+ */
 	 
-	public final class ContrInOutput_Open extends Application {
+public final class ContrInOutput_Open extends Application {
 //		public final class ContrInOutput_Open {	
 	 
 	   // private Desktop desktop = Desktop.getDesktop();
