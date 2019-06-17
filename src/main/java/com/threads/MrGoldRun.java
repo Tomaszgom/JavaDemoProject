@@ -1,8 +1,13 @@
 package com.threads;
 
-import java.io.IOException;
 import com.controllers.ContrThreadsMain;
 import javafx.application.Platform;
+
+/**
+ * 
+ * MrGold Runnable class
+ *
+ */
 
 public class MrGoldRun implements Runnable {
 

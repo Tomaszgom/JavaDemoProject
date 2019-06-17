@@ -1,19 +1,18 @@
 package com.threads;
 
-import java.io.IOException;
-
-import com.controllers.ContrThreadsMrGold;
 import javafx.concurrent.Task;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Rectangle2D;
-import javafx.stage.Stage;
 
+/**
+ * 
+ * MrBlue Task handles actions of MrBlue Thread
+ *
+ */
 
 public class MrBlue extends Task<Void> {
 	
     @Override
     public Void call() throws Exception {   	    	
-		//System.out.println("Mr Blue. Current Thread name: "+Thread.currentThread().getName());		
+
 		try {			
 			
 			updateMessage(" ");

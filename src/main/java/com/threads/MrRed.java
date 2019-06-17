@@ -1,9 +1,14 @@
 package com.threads;
 
-import com.controllers.ContrThreadsMain;
 import com.controllers.ContrThreadsMrGold;
 import com.controllers.ContrThreadsMrRed;
 import javafx.concurrent.Task;
+
+/**
+ * 
+ * MrRed Task handles actions of MrRed Thread
+ *
+ */
 
 public class MrRed extends Task<Void> {
 	
@@ -15,7 +20,7 @@ public class MrRed extends Task<Void> {
 
 	@Override
     public Void call() throws Exception {   	    	
-		//System.out.println("Mr Red. Current Thread name: "+Thread.currentThread().getName());		
+
 		try {	
 			Thread.sleep(1400);
 			updateMessage("Hi, my name is Mr Red.");

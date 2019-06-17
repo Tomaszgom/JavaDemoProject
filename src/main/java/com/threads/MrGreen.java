@@ -1,18 +1,14 @@
 package com.threads;
 
-import java.io.IOException;
 import java.util.ArrayList;
-
 import com.controllers.ContrThreadsMrBlue;
-import com.controllers.ContrThreadsMrGreen;
 import javafx.concurrent.Task;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Rectangle2D;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Screen;
-import javafx.stage.Stage;
 
+/**
+ * 
+ * MrGreen Task handles actions of MrGreen Thread
+ *
+ */
 
 public class MrGreen extends Task<Void> {
 	
@@ -20,7 +16,7 @@ public class MrGreen extends Task<Void> {
 	
     @Override
     public Void call() throws Exception {   	    	
-		//System.out.println("Mr Green. Current Thread name: "+Thread.currentThread().getName());		  	
+	  	
     	LoadRomePlaces();  	
     	
 		try {

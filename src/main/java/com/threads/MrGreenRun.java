@@ -1,8 +1,13 @@
 package com.threads;
 
-import java.io.IOException;
 import com.controllers.ContrThreadsMain;
 import javafx.application.Platform;
+
+/**
+ * 
+ * MrGreen Runnable class
+ *
+ */
 
 public class MrGreenRun implements Runnable {
 
