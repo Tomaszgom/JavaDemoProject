@@ -4,11 +4,17 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
-import java.awt.geom.AffineTransform;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 import javax.swing.JComponent;
+
+/**
+ * 
+ * JComponent class 
+ * Sets JFrame, handles, graphics, creating game objects, handles movement
+ *
+ */
 
 @SuppressWarnings("serial")
 
@@ -41,7 +47,9 @@ public class SpacePanelJComponent extends JComponent{
 			craft.setCraftPosition(450, 700);
 		} 
 		
-		public void paint(Graphics graphics) { //  graphics settings	
+		public void paint(Graphics graphics) { 
+			
+			//  Graphics settings	
 			Graphics2D graphSettings = (Graphics2D)graphics; 
 //			AffineTransform identity = new AffineTransform();		
 			graphSettings.setColor(Color.BLUE.darker().darker()); //background
@@ -81,7 +89,8 @@ public class SpacePanelJComponent extends JComponent{
 			//graphSettings.draw(craft.getBounds()); // show collision rectangle			
 			
 		} 
-		//get random number within range
+		
+		// Get random number within range
 		public int getRandomInt(int min, int max) {
 			return  ThreadLocalRandom.current().nextInt(min, max+1);
 		}

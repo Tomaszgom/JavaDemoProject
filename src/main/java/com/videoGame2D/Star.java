@@ -4,6 +4,14 @@ import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * 
+ * Star Object Class
+ * One of the main objects in the game representing flowing star objects
+ * Class describes Star parameters and characteristic defining the look,
+ * how it moves and how interacts with other objects
+ *
+ */
 
 class Star extends Polygon{ 
 	
@@ -46,7 +54,8 @@ class Star extends Polygon{
         return new Rectangle(super.xpoints[0]-17, super.ypoints[0]-40, starWidth, starHeight);       
     }
 
-		// ------------ MOVE
+		/*		MOVE		*/
+	
 	public void move(Craft craftInteract){
 		 
 		Rectangle thisStarRectangle = this.getBounds();		

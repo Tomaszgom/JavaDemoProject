@@ -4,6 +4,14 @@ import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * 
+ * Craft Object Class
+ * One of the main objects in the game representing flying Space Craft being controlled by game player
+ * Class describes Craft parameters and characteristic defining the look,
+ * how it moves and how interacts with other objects
+ *
+ */
 
 class Craft extends Polygon{ 
 	
@@ -63,7 +71,8 @@ class Craft extends Polygon{
     }
 
 	
-		// --------------- MOVE
+		/*		MOVE		*/
+	
 	public void move(){
 
 		int topXPoint = super.xpoints[0]; 		

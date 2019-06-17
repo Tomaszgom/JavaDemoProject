@@ -8,6 +8,13 @@ import java.util.concurrent.TimeUnit;
 
 import javax.swing.JFrame;
 
+/**
+ * 
+ * Main SpaceJFrame Class representing game frame parmeters
+ * handles user control by key listener
+ *
+ */
+
 public class SpaceJFrame extends JFrame{
 	
 	private static final long serialVersionUID = 1L;
@@ -16,13 +23,14 @@ public class SpaceJFrame extends JFrame{
 	public static boolean keyPressed = false;
 	public static int keyCode;
 	
-	// -------- MAIN ---------------
+	/*		Main	*/
+	
 	public static void main(String [] args){
 		//System.out.println("Game Started");
             new SpaceJFrame();           
     }
 
-// --- Getters
+	/* Getters */
 	public static int GetSpaceFrameWidth(){
 		return spaceFrameWidth;
 	}
@@ -30,14 +38,14 @@ public class SpaceJFrame extends JFrame{
 		return spaceFrameHeight;
 	}
 	
-// --- Constructor
+	/* Constructor */
 	public SpaceJFrame(){
 		//this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);       
 		this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		this.setTitle("Java Demo Project Video Game");
 		this.setSize(spaceFrameWidth, spaceFrameHeight);
    
-  //  ----- KeyListene START
+  	/* KeyListene START */
 	addKeyListener(new KeyListener() {
 
 		@Override
@@ -87,7 +95,7 @@ public class SpaceJFrame extends JFrame{
 		public void keyReleased(KeyEvent e) {		
 			keyPressed = false;				
 		}       	
-    });//--------------------- KeyListener END
+    });//--> KeyListener END
     
 	SpacePanelJComponent spacePanel = new SpacePanelJComponent();
     this.add(spacePanel, BorderLayout.CENTER);       
