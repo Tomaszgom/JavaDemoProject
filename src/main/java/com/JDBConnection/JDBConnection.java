@@ -5,8 +5,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-//Technologies used Oracle Express Database 11g
-//driver library ojdbc6.jar
+/**
+ * Oracle Express Database 11g
+ * lib ojdbc6.jar
+ *
+ */
+
 public class JDBConnection {
 
 	public static void main(String[] args){
