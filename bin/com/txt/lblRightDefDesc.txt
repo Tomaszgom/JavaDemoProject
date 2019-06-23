@@ -1,1 +1,0 @@
-While hovering over menu on the left, you will see what libraries, technologies and concepts have been incorporated in each module.

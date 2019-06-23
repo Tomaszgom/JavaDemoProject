@@ -1,1 +1,0 @@
-Interface implementation, instance variable, Composition, Decoupling, Encapsulation.

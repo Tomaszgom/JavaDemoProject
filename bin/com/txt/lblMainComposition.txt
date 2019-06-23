@@ -1,1 +1,0 @@
-This module presents example of Composition and Encapsulation used as programming concepts.

@@ -1,6 +1,0 @@
-0,This is, formatted text
-1, First, row
-2, Second, row
-3, Third, row
-4, Fourth, row
-5, Fifth, row

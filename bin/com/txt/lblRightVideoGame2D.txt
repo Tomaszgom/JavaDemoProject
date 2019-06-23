@@ -1,1 +1,0 @@
-Space Travel game incorporates Threads, Polygon and Rectangle objects, JFrame, libraries: java.awt.Graphics2D, awt.Polygon, util.concurren, including concurrent.ScheduledThreadPoolExecutor.

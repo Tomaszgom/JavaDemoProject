@@ -1,1 +1,0 @@
-This section presents examples of Design Patterns usage. It is recommended to review it together with the source code.

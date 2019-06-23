@@ -1,1 +1,0 @@
-This module is a small client-server appication that allows to connect with Oracle Database, query, fetch, display, update, insert and delete data, all these with use of interactive JTable. It requires running Oracle database service, credentials and accessible Client table.

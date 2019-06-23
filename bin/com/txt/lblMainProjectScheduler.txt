@@ -1,1 +1,0 @@
-This program allows to plan project process by adding, removing its parts, reviewing and displaying details, including statistics. Project consists of Stages and each Stage consists of Tasks.
